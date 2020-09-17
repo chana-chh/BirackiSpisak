@@ -45,13 +45,10 @@ namespace BirackiSpisakUI
                 if (korisnik != null)
                 {
                     bool ispravnaLozinka = Password.Compare(lozinka, korisnik.Lozinka);
-                
+
                     if (ispravnaLozinka)
                     {
-                        FrmKontrolnaTabla KontrolnaTabla = new FrmKontrolnaTabla
-                        {
-                            Korisnik = korisnik
-                        };
+                        FrmKontrolnaTabla KontrolnaTabla = new FrmKontrolnaTabla { korisnik = korisnik };
                         KontrolnaTabla.Show();
                         Close();
                     }

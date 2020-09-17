@@ -1,4 +1,5 @@
 ﻿using BirackiSpisakDataManager.Models;
+using BirackiSpisakUI.Forms;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -11,17 +12,22 @@ namespace BirackiSpisakUI
 {
     public partial class FrmKontrolnaTabla : Form
     {
-        private Korisnik _korisnik;
-
-        public Korisnik Korisnik
-        {
-            get { return _korisnik; }
-            set { _korisnik = value; }
-        }
+        public Korisnik korisnik { get; set; }
 
         public FrmKontrolnaTabla()
         {
             InitializeComponent();
+        }
+
+        private void btnIzlaz_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void btnUvozPromena_Click(object sender, EventArgs e)
+        {
+            FrmUvozPromena forma = new FrmUvozPromena();
+            forma.ShowDialog();
         }
     }
 }
