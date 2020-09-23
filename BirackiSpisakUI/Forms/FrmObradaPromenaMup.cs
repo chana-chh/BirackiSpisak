@@ -190,5 +190,15 @@ namespace BirackiSpisakUI.Forms
         {
             JbsMup.ZatvoriChrome();
         }
+
+        private void btnJmbg_Click(object sender, EventArgs e)
+        {
+            JbsMup.Jmbg(txtJmbg.Text);
+        }
+
+        private void btnZahtevi_Click(object sender, EventArgs e)
+        {
+            JbsMup.Jbs();
+        }
     }
 }

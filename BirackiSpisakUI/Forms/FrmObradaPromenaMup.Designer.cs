@@ -74,7 +74,7 @@
             this.btnChrome = new System.Windows.Forms.Button();
             this.pnlDugmici = new System.Windows.Forms.Panel();
             this.btnJmbg = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnZahtevi = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.pnlDugmici.SuspendLayout();
             this.SuspendLayout();
@@ -563,7 +563,7 @@
             // pnlDugmici
             // 
             this.pnlDugmici.Controls.Add(this.button2);
-            this.pnlDugmici.Controls.Add(this.button1);
+            this.pnlDugmici.Controls.Add(this.btnZahtevi);
             this.pnlDugmici.Controls.Add(this.btnJmbg);
             this.pnlDugmici.Location = new System.Drawing.Point(12, 385);
             this.pnlDugmici.Name = "pnlDugmici";
@@ -580,17 +580,19 @@
             this.btnJmbg.TabIndex = 0;
             this.btnJmbg.Text = "ЈМБГ";
             this.btnJmbg.UseVisualStyleBackColor = true;
+            this.btnJmbg.Click += new System.EventHandler(this.btnJmbg_Click);
             // 
-            // button1
+            // btnZahtevi
             // 
-            this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Gainsboro;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Location = new System.Drawing.Point(81, 3);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 30);
-            this.button1.TabIndex = 0;
-            this.button1.Text = "ЈМБГ";
-            this.button1.UseVisualStyleBackColor = true;
+            this.btnZahtevi.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Gainsboro;
+            this.btnZahtevi.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnZahtevi.Location = new System.Drawing.Point(81, 3);
+            this.btnZahtevi.Name = "btnZahtevi";
+            this.btnZahtevi.Size = new System.Drawing.Size(75, 30);
+            this.btnZahtevi.TabIndex = 0;
+            this.btnZahtevi.Text = "Захтеви";
+            this.btnZahtevi.UseVisualStyleBackColor = true;
+            this.btnZahtevi.Click += new System.EventHandler(this.btnZahtevi_Click);
             // 
             // button2
             // 
@@ -718,7 +720,7 @@
         private System.Windows.Forms.Button btnChrome;
         private System.Windows.Forms.Panel pnlDugmici;
         private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnZahtevi;
         private System.Windows.Forms.Button btnJmbg;
     }
 }

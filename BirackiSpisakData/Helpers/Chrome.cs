@@ -121,6 +121,17 @@ namespace BirackiSpisakDataManager.Helpers
             return el;
         }
 
+        public static SelectElement ElementSelect(string value, Selector sel = Selector.Id)
+        {
+            var el = Element(value, sel);
+            if (el != null)
+            {
+                return new SelectElement(el);
+            }
+            return null;
+        }
+
+
         public static void Zatvori()
         {
             _driver.Quit();
