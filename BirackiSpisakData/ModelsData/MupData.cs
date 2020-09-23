@@ -55,7 +55,7 @@ namespace BirackiSpisakDataManager.ModelsData
             {
                 conn.Open();
                 string sql = @"SELECT * FROM dbo.MupPodaci ORDER BY Id;";
-                if (Jmbg != null)
+                if (!string.IsNullOrEmpty(Jmbg))
                 {
                     sql = @"SELECT * FROM dbo.MupPodaci WHERE Jmbg LIKE '%' + @Jmbg + '%' ORDER BY Id;";
                     Promene = conn.Query<Mup>(sql, new { Jmbg = Jmbg }).ToList();
@@ -73,7 +73,7 @@ namespace BirackiSpisakDataManager.ModelsData
             using (var conn = Db.Conn("BirackiSpisak"))
             {
                 conn.Open();
-                string sql = @"SELECT TOP (1000) * FROM [BirackiSpisak].[dbo].[MupPodaci] ORDER BY DatumFajla DESC;";
+                string sql = @"SELECT * FROM [BirackiSpisak].[dbo].[MupPodaci] ORDER BY DatumFajla DESC;";
                 SvePromene = conn.Query<Mup>(sql).ToList();
             }
             return SvePromene;
@@ -135,6 +135,37 @@ namespace BirackiSpisakDataManager.ModelsData
                 duplikati = conn.Query<string>(sql).ToList();
             }
             return duplikati;
+        }
+
+        public List<MupStari> StarePromenePoJmbg(string Jmbg = null)
+        {
+            List<MupStari> Promene = new List<MupStari>();
+            using (var conn = Db.Conn("BirackiSpisak"))
+            {
+                conn.Open();
+                string sql = @"SELECT * FROM dbo.MupPodaciStari ORDER BY Id;";
+                if (!string.IsNullOrEmpty(Jmbg))
+                {
+                    sql = @"SELECT * FROM dbo.MupPodaciStari WHERE JMBG LIKE '%' + @Jmbg + '%' ORDER BY Id;";
+                    Promene = conn.Query<MupStari>(sql, new { Jmbg = Jmbg }).ToList();
+                    return Promene;
+                }
+
+                Promene = conn.Query<MupStari>(sql).ToList();
+            }
+            return Promene;
+        }
+
+        public List<MupStari> StareSvePromene()
+        {
+            List<MupStari> SvePromene = new List<MupStari>();
+            using (var conn = Db.Conn("BirackiSpisak"))
+            {
+                conn.Open();
+                string sql = @"SELECT * FROM [BirackiSpisak].[dbo].[MupPodaciStari] ORDER BY DatumFajla DESC;";
+                SvePromene = conn.Query<MupStari>(sql).ToList();
+            }
+            return SvePromene;
         }
     }
 }
