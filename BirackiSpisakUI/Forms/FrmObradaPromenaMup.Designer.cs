@@ -75,20 +75,20 @@
             this.pnlDugmici = new System.Windows.Forms.Panel();
             this.btnLicniPodaci = new System.Windows.Forms.Button();
             this.btnAdresa = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
+            this.btnUpisPrebivalista = new System.Windows.Forms.Button();
+            this.btnOdjavaPrebivalistaSluzbeno = new System.Windows.Forms.Button();
+            this.btnOdjavaPrebivalista = new System.Windows.Forms.Button();
+            this.btnPromenaLicnihPodataka = new System.Windows.Forms.Button();
+            this.btnPromenaPrebivalista = new System.Windows.Forms.Button();
+            this.btnUmrli = new System.Windows.Forms.Button();
+            this.btnPunoletni = new System.Windows.Forms.Button();
+            this.btnResenje = new System.Windows.Forms.Button();
+            this.btnTrenutnoPrebivaliste = new System.Windows.Forms.Button();
+            this.btnMku = new System.Windows.Forms.Button();
+            this.btnMkr = new System.Windows.Forms.Button();
+            this.btnMkv = new System.Windows.Forms.Button();
             this.btnZahtevi = new System.Windows.Forms.Button();
             this.btnJmbg = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
-            this.button6 = new System.Windows.Forms.Button();
-            this.button7 = new System.Windows.Forms.Button();
-            this.button8 = new System.Windows.Forms.Button();
-            this.button9 = new System.Windows.Forms.Button();
-            this.button10 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button11 = new System.Windows.Forms.Button();
-            this.button12 = new System.Windows.Forms.Button();
             this.pnlDugmici.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -120,7 +120,7 @@
             this.txtJmbg.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtJmbg.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.txtJmbg.ForeColor = System.Drawing.Color.Firebrick;
-            this.txtJmbg.Location = new System.Drawing.Point(56, 11);
+            this.txtJmbg.Location = new System.Drawing.Point(53, 9);
             this.txtJmbg.MaxLength = 13;
             this.txtJmbg.Name = "txtJmbg";
             this.txtJmbg.ReadOnly = true;
@@ -142,7 +142,7 @@
             this.txtDatumOdredjivanjaJmbg.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtDatumOdredjivanjaJmbg.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.txtDatumOdredjivanjaJmbg.ForeColor = System.Drawing.Color.Black;
-            this.txtDatumOdredjivanjaJmbg.Location = new System.Drawing.Point(326, 12);
+            this.txtDatumOdredjivanjaJmbg.Location = new System.Drawing.Point(323, 10);
             this.txtDatumOdredjivanjaJmbg.MaxLength = 3000;
             this.txtDatumOdredjivanjaJmbg.Name = "txtDatumOdredjivanjaJmbg";
             this.txtDatumOdredjivanjaJmbg.ReadOnly = true;
@@ -174,7 +174,7 @@
             this.txtPol.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtPol.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.txtPol.ForeColor = System.Drawing.Color.Black;
-            this.txtPol.Location = new System.Drawing.Point(470, 12);
+            this.txtPol.Location = new System.Drawing.Point(467, 10);
             this.txtPol.MaxLength = 13;
             this.txtPol.Name = "txtPol";
             this.txtPol.ReadOnly = true;
@@ -196,7 +196,7 @@
             this.txtStatus.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtStatus.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.txtStatus.ForeColor = System.Drawing.Color.Black;
-            this.txtStatus.Location = new System.Drawing.Point(586, 13);
+            this.txtStatus.Location = new System.Drawing.Point(583, 11);
             this.txtStatus.MaxLength = 13;
             this.txtStatus.Name = "txtStatus";
             this.txtStatus.ReadOnly = true;
@@ -208,7 +208,7 @@
             this.txtJmbgStari.BackColor = System.Drawing.Color.White;
             this.txtJmbgStari.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtJmbgStari.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.txtJmbgStari.ForeColor = System.Drawing.Color.Firebrick;
+            this.txtJmbgStari.ForeColor = System.Drawing.Color.Red;
             this.txtJmbgStari.Location = new System.Drawing.Point(56, 40);
             this.txtJmbgStari.MaxLength = 13;
             this.txtJmbgStari.Name = "txtJmbgStari";
@@ -221,7 +221,7 @@
             this.txtJmbgDatumStari.BackColor = System.Drawing.Color.White;
             this.txtJmbgDatumStari.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtJmbgDatumStari.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.txtJmbgDatumStari.ForeColor = System.Drawing.Color.Firebrick;
+            this.txtJmbgDatumStari.ForeColor = System.Drawing.Color.Red;
             this.txtJmbgDatumStari.Location = new System.Drawing.Point(162, 40);
             this.txtJmbgDatumStari.MaxLength = 3000;
             this.txtJmbgDatumStari.Name = "txtJmbgDatumStari";
@@ -265,7 +265,7 @@
             this.txtDatumOtpusta.BackColor = System.Drawing.Color.White;
             this.txtDatumOtpusta.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtDatumOtpusta.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.txtDatumOtpusta.ForeColor = System.Drawing.Color.Black;
+            this.txtDatumOtpusta.ForeColor = System.Drawing.Color.Red;
             this.txtDatumOtpusta.Location = new System.Drawing.Point(546, 40);
             this.txtDatumOtpusta.MaxLength = 3000;
             this.txtDatumOtpusta.Name = "txtDatumOtpusta";
@@ -598,18 +598,18 @@
             // 
             this.pnlDugmici.Controls.Add(this.btnLicniPodaci);
             this.pnlDugmici.Controls.Add(this.btnAdresa);
-            this.pnlDugmici.Controls.Add(this.button6);
-            this.pnlDugmici.Controls.Add(this.button9);
-            this.pnlDugmici.Controls.Add(this.button8);
-            this.pnlDugmici.Controls.Add(this.button7);
-            this.pnlDugmici.Controls.Add(this.button1);
-            this.pnlDugmici.Controls.Add(this.button10);
-            this.pnlDugmici.Controls.Add(this.button5);
-            this.pnlDugmici.Controls.Add(this.button3);
-            this.pnlDugmici.Controls.Add(this.button4);
-            this.pnlDugmici.Controls.Add(this.button12);
-            this.pnlDugmici.Controls.Add(this.button11);
-            this.pnlDugmici.Controls.Add(this.button2);
+            this.pnlDugmici.Controls.Add(this.btnUpisPrebivalista);
+            this.pnlDugmici.Controls.Add(this.btnOdjavaPrebivalistaSluzbeno);
+            this.pnlDugmici.Controls.Add(this.btnOdjavaPrebivalista);
+            this.pnlDugmici.Controls.Add(this.btnPromenaLicnihPodataka);
+            this.pnlDugmici.Controls.Add(this.btnPromenaPrebivalista);
+            this.pnlDugmici.Controls.Add(this.btnUmrli);
+            this.pnlDugmici.Controls.Add(this.btnPunoletni);
+            this.pnlDugmici.Controls.Add(this.btnResenje);
+            this.pnlDugmici.Controls.Add(this.btnTrenutnoPrebivaliste);
+            this.pnlDugmici.Controls.Add(this.btnMku);
+            this.pnlDugmici.Controls.Add(this.btnMkr);
+            this.pnlDugmici.Controls.Add(this.btnMkv);
             this.pnlDugmici.Controls.Add(this.btnZahtevi);
             this.pnlDugmici.Controls.Add(this.btnJmbg);
             this.pnlDugmici.Enabled = false;
@@ -620,6 +620,7 @@
             // 
             // btnLicniPodaci
             // 
+            this.btnLicniPodaci.BackColor = System.Drawing.Color.PaleGoldenrod;
             this.btnLicniPodaci.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Gainsboro;
             this.btnLicniPodaci.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnLicniPodaci.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
@@ -628,10 +629,11 @@
             this.btnLicniPodaci.Size = new System.Drawing.Size(100, 30);
             this.btnLicniPodaci.TabIndex = 0;
             this.btnLicniPodaci.Text = "Упиши ЛП";
-            this.btnLicniPodaci.UseVisualStyleBackColor = true;
+            this.btnLicniPodaci.UseVisualStyleBackColor = false;
             // 
             // btnAdresa
             // 
+            this.btnAdresa.BackColor = System.Drawing.Color.PaleGoldenrod;
             this.btnAdresa.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Gainsboro;
             this.btnAdresa.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAdresa.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
@@ -640,34 +642,168 @@
             this.btnAdresa.Size = new System.Drawing.Size(100, 30);
             this.btnAdresa.TabIndex = 0;
             this.btnAdresa.Text = "Упиши адресу";
-            this.btnAdresa.UseVisualStyleBackColor = true;
+            this.btnAdresa.UseVisualStyleBackColor = false;
             // 
-            // button1
+            // btnUpisPrebivalista
             // 
-            this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Gainsboro;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.button1.Location = new System.Drawing.Point(0, 31);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(100, 30);
-            this.button1.TabIndex = 0;
-            this.button1.Text = "Промена преб";
-            this.button1.UseVisualStyleBackColor = true;
+            this.btnUpisPrebivalista.BackColor = System.Drawing.Color.PaleGreen;
+            this.btnUpisPrebivalista.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Gainsboro;
+            this.btnUpisPrebivalista.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnUpisPrebivalista.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.btnUpisPrebivalista.Location = new System.Drawing.Point(101, 31);
+            this.btnUpisPrebivalista.Name = "btnUpisPrebivalista";
+            this.btnUpisPrebivalista.Size = new System.Drawing.Size(100, 30);
+            this.btnUpisPrebivalista.TabIndex = 0;
+            this.btnUpisPrebivalista.Text = "Упис преб";
+            this.btnUpisPrebivalista.UseVisualStyleBackColor = false;
             // 
-            // button2
+            // btnOdjavaPrebivalistaSluzbeno
             // 
-            this.button2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Gainsboro;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.button2.Location = new System.Drawing.Point(303, 90);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(100, 30);
-            this.button2.TabIndex = 0;
-            this.button2.Text = "МКВ";
-            this.button2.UseVisualStyleBackColor = true;
+            this.btnOdjavaPrebivalistaSluzbeno.BackColor = System.Drawing.Color.PaleGreen;
+            this.btnOdjavaPrebivalistaSluzbeno.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Gainsboro;
+            this.btnOdjavaPrebivalistaSluzbeno.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnOdjavaPrebivalistaSluzbeno.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.btnOdjavaPrebivalistaSluzbeno.Location = new System.Drawing.Point(404, 31);
+            this.btnOdjavaPrebivalistaSluzbeno.Name = "btnOdjavaPrebivalistaSluzbeno";
+            this.btnOdjavaPrebivalistaSluzbeno.Size = new System.Drawing.Size(100, 30);
+            this.btnOdjavaPrebivalistaSluzbeno.TabIndex = 0;
+            this.btnOdjavaPrebivalistaSluzbeno.Text = "Одјава СЛ";
+            this.btnOdjavaPrebivalistaSluzbeno.UseVisualStyleBackColor = false;
+            // 
+            // btnOdjavaPrebivalista
+            // 
+            this.btnOdjavaPrebivalista.BackColor = System.Drawing.Color.PaleGreen;
+            this.btnOdjavaPrebivalista.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Gainsboro;
+            this.btnOdjavaPrebivalista.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnOdjavaPrebivalista.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.btnOdjavaPrebivalista.Location = new System.Drawing.Point(303, 31);
+            this.btnOdjavaPrebivalista.Name = "btnOdjavaPrebivalista";
+            this.btnOdjavaPrebivalista.Size = new System.Drawing.Size(100, 30);
+            this.btnOdjavaPrebivalista.TabIndex = 0;
+            this.btnOdjavaPrebivalista.Text = "Одјава преб";
+            this.btnOdjavaPrebivalista.UseVisualStyleBackColor = false;
+            // 
+            // btnPromenaLicnihPodataka
+            // 
+            this.btnPromenaLicnihPodataka.BackColor = System.Drawing.Color.PaleGreen;
+            this.btnPromenaLicnihPodataka.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Gainsboro;
+            this.btnPromenaLicnihPodataka.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnPromenaLicnihPodataka.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.btnPromenaLicnihPodataka.Location = new System.Drawing.Point(202, 31);
+            this.btnPromenaLicnihPodataka.Name = "btnPromenaLicnihPodataka";
+            this.btnPromenaLicnihPodataka.Size = new System.Drawing.Size(100, 30);
+            this.btnPromenaLicnihPodataka.TabIndex = 0;
+            this.btnPromenaLicnihPodataka.Text = "Промена ЛП";
+            this.btnPromenaLicnihPodataka.UseVisualStyleBackColor = false;
+            // 
+            // btnPromenaPrebivalista
+            // 
+            this.btnPromenaPrebivalista.BackColor = System.Drawing.Color.PaleGreen;
+            this.btnPromenaPrebivalista.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Gainsboro;
+            this.btnPromenaPrebivalista.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnPromenaPrebivalista.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.btnPromenaPrebivalista.Location = new System.Drawing.Point(0, 31);
+            this.btnPromenaPrebivalista.Name = "btnPromenaPrebivalista";
+            this.btnPromenaPrebivalista.Size = new System.Drawing.Size(100, 30);
+            this.btnPromenaPrebivalista.TabIndex = 0;
+            this.btnPromenaPrebivalista.Text = "Промена преб";
+            this.btnPromenaPrebivalista.UseVisualStyleBackColor = false;
+            this.btnPromenaPrebivalista.Click += new System.EventHandler(this.btnPromenaPrebivalista_Click);
+            // 
+            // btnUmrli
+            // 
+            this.btnUmrli.BackColor = System.Drawing.Color.PaleGreen;
+            this.btnUmrli.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Gainsboro;
+            this.btnUmrli.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnUmrli.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.btnUmrli.Location = new System.Drawing.Point(505, 0);
+            this.btnUmrli.Name = "btnUmrli";
+            this.btnUmrli.Size = new System.Drawing.Size(100, 30);
+            this.btnUmrli.TabIndex = 0;
+            this.btnUmrli.Text = "Умрли";
+            this.btnUmrli.UseVisualStyleBackColor = false;
+            // 
+            // btnPunoletni
+            // 
+            this.btnPunoletni.BackColor = System.Drawing.Color.PaleGreen;
+            this.btnPunoletni.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Gainsboro;
+            this.btnPunoletni.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnPunoletni.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.btnPunoletni.Location = new System.Drawing.Point(404, 0);
+            this.btnPunoletni.Name = "btnPunoletni";
+            this.btnPunoletni.Size = new System.Drawing.Size(100, 30);
+            this.btnPunoletni.TabIndex = 0;
+            this.btnPunoletni.Text = "Пунолетни";
+            this.btnPunoletni.UseVisualStyleBackColor = false;
+            // 
+            // btnResenje
+            // 
+            this.btnResenje.BackColor = System.Drawing.Color.OrangeRed;
+            this.btnResenje.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Gainsboro;
+            this.btnResenje.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnResenje.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btnResenje.Location = new System.Drawing.Point(505, 31);
+            this.btnResenje.Name = "btnResenje";
+            this.btnResenje.Size = new System.Drawing.Size(100, 30);
+            this.btnResenje.TabIndex = 0;
+            this.btnResenje.Text = "РШЕЊЕ";
+            this.btnResenje.UseVisualStyleBackColor = false;
+            // 
+            // btnTrenutnoPrebivaliste
+            // 
+            this.btnTrenutnoPrebivaliste.BackColor = System.Drawing.Color.Lavender;
+            this.btnTrenutnoPrebivaliste.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Gainsboro;
+            this.btnTrenutnoPrebivaliste.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnTrenutnoPrebivaliste.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.btnTrenutnoPrebivaliste.Location = new System.Drawing.Point(0, 90);
+            this.btnTrenutnoPrebivaliste.Name = "btnTrenutnoPrebivaliste";
+            this.btnTrenutnoPrebivaliste.Size = new System.Drawing.Size(100, 30);
+            this.btnTrenutnoPrebivaliste.TabIndex = 0;
+            this.btnTrenutnoPrebivaliste.Text = "Тренутно преб";
+            this.btnTrenutnoPrebivaliste.UseVisualStyleBackColor = false;
+            // 
+            // btnMku
+            // 
+            this.btnMku.BackColor = System.Drawing.Color.Lavender;
+            this.btnMku.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Gainsboro;
+            this.btnMku.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnMku.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.btnMku.Location = new System.Drawing.Point(202, 90);
+            this.btnMku.Name = "btnMku";
+            this.btnMku.Size = new System.Drawing.Size(100, 30);
+            this.btnMku.TabIndex = 0;
+            this.btnMku.Text = "МКУ";
+            this.btnMku.UseVisualStyleBackColor = false;
+            // 
+            // btnMkr
+            // 
+            this.btnMkr.BackColor = System.Drawing.Color.Lavender;
+            this.btnMkr.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Gainsboro;
+            this.btnMkr.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnMkr.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.btnMkr.Location = new System.Drawing.Point(101, 90);
+            this.btnMkr.Name = "btnMkr";
+            this.btnMkr.Size = new System.Drawing.Size(100, 30);
+            this.btnMkr.TabIndex = 0;
+            this.btnMkr.Text = "МКР";
+            this.btnMkr.UseVisualStyleBackColor = false;
+            // 
+            // btnMkv
+            // 
+            this.btnMkv.BackColor = System.Drawing.Color.Lavender;
+            this.btnMkv.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Gainsboro;
+            this.btnMkv.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnMkv.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.btnMkv.Location = new System.Drawing.Point(303, 90);
+            this.btnMkv.Name = "btnMkv";
+            this.btnMkv.Size = new System.Drawing.Size(100, 30);
+            this.btnMkv.TabIndex = 0;
+            this.btnMkv.Text = "МКВ";
+            this.btnMkv.UseVisualStyleBackColor = false;
             // 
             // btnZahtevi
             // 
+            this.btnZahtevi.BackColor = System.Drawing.Color.PaleGoldenrod;
             this.btnZahtevi.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Gainsboro;
             this.btnZahtevi.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnZahtevi.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
@@ -676,11 +812,12 @@
             this.btnZahtevi.Size = new System.Drawing.Size(100, 30);
             this.btnZahtevi.TabIndex = 0;
             this.btnZahtevi.Text = "Захтеви";
-            this.btnZahtevi.UseVisualStyleBackColor = true;
+            this.btnZahtevi.UseVisualStyleBackColor = false;
             this.btnZahtevi.Click += new System.EventHandler(this.btnZahtevi_Click);
             // 
             // btnJmbg
             // 
+            this.btnJmbg.BackColor = System.Drawing.Color.PaleGoldenrod;
             this.btnJmbg.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Gainsboro;
             this.btnJmbg.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnJmbg.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
@@ -689,128 +826,8 @@
             this.btnJmbg.Size = new System.Drawing.Size(100, 30);
             this.btnJmbg.TabIndex = 0;
             this.btnJmbg.Text = "ЈМБГ";
-            this.btnJmbg.UseVisualStyleBackColor = true;
+            this.btnJmbg.UseVisualStyleBackColor = false;
             this.btnJmbg.Click += new System.EventHandler(this.btnJmbg_Click);
-            // 
-            // button5
-            // 
-            this.button5.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Gainsboro;
-            this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button5.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.button5.Location = new System.Drawing.Point(404, 0);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(100, 30);
-            this.button5.TabIndex = 0;
-            this.button5.Text = "Пунолетни";
-            this.button5.UseVisualStyleBackColor = true;
-            // 
-            // button6
-            // 
-            this.button6.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Gainsboro;
-            this.button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button6.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.button6.Location = new System.Drawing.Point(101, 31);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(100, 30);
-            this.button6.TabIndex = 0;
-            this.button6.Text = "Упис преб";
-            this.button6.UseVisualStyleBackColor = true;
-            // 
-            // button7
-            // 
-            this.button7.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Gainsboro;
-            this.button7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button7.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.button7.Location = new System.Drawing.Point(202, 31);
-            this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(100, 30);
-            this.button7.TabIndex = 0;
-            this.button7.Text = "Промена ЛП";
-            this.button7.UseVisualStyleBackColor = true;
-            // 
-            // button8
-            // 
-            this.button8.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Gainsboro;
-            this.button8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button8.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.button8.Location = new System.Drawing.Point(303, 31);
-            this.button8.Name = "button8";
-            this.button8.Size = new System.Drawing.Size(100, 30);
-            this.button8.TabIndex = 0;
-            this.button8.Text = "Одјава преб";
-            this.button8.UseVisualStyleBackColor = true;
-            // 
-            // button9
-            // 
-            this.button9.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Gainsboro;
-            this.button9.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button9.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.button9.Location = new System.Drawing.Point(404, 31);
-            this.button9.Name = "button9";
-            this.button9.Size = new System.Drawing.Size(100, 30);
-            this.button9.TabIndex = 0;
-            this.button9.Text = "Одјава СЛ";
-            this.button9.UseVisualStyleBackColor = true;
-            // 
-            // button10
-            // 
-            this.button10.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Gainsboro;
-            this.button10.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button10.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.button10.Location = new System.Drawing.Point(505, 0);
-            this.button10.Name = "button10";
-            this.button10.Size = new System.Drawing.Size(100, 30);
-            this.button10.TabIndex = 0;
-            this.button10.Text = "Умрли";
-            this.button10.UseVisualStyleBackColor = true;
-            // 
-            // button3
-            // 
-            this.button3.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Gainsboro;
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.button3.Location = new System.Drawing.Point(505, 31);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(100, 30);
-            this.button3.TabIndex = 0;
-            this.button3.Text = "РШЕЊЕ";
-            this.button3.UseVisualStyleBackColor = true;
-            // 
-            // button4
-            // 
-            this.button4.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Gainsboro;
-            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button4.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.button4.Location = new System.Drawing.Point(0, 90);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(100, 30);
-            this.button4.TabIndex = 0;
-            this.button4.Text = "Тренутно преб";
-            this.button4.UseVisualStyleBackColor = true;
-            // 
-            // button11
-            // 
-            this.button11.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Gainsboro;
-            this.button11.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button11.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.button11.Location = new System.Drawing.Point(101, 90);
-            this.button11.Name = "button11";
-            this.button11.Size = new System.Drawing.Size(100, 30);
-            this.button11.TabIndex = 0;
-            this.button11.Text = "МКР";
-            this.button11.UseVisualStyleBackColor = true;
-            // 
-            // button12
-            // 
-            this.button12.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Gainsboro;
-            this.button12.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button12.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.button12.Location = new System.Drawing.Point(202, 90);
-            this.button12.Name = "button12";
-            this.button12.Size = new System.Drawing.Size(100, 30);
-            this.button12.TabIndex = 0;
-            this.button12.Text = "МКУ";
-            this.button12.UseVisualStyleBackColor = true;
             // 
             // FrmObradaPromenaMup
             // 
@@ -926,21 +943,21 @@
         private System.Windows.Forms.Button btnPrijava;
         private System.Windows.Forms.Button btnChrome;
         private System.Windows.Forms.Panel pnlDugmici;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button btnMkv;
         private System.Windows.Forms.Button btnZahtevi;
         private System.Windows.Forms.Button btnJmbg;
         private System.Windows.Forms.Button btnLicniPodaci;
         private System.Windows.Forms.Button btnAdresa;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button6;
-        private System.Windows.Forms.Button button9;
-        private System.Windows.Forms.Button button8;
-        private System.Windows.Forms.Button button7;
-        private System.Windows.Forms.Button button10;
-        private System.Windows.Forms.Button button5;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Button button12;
-        private System.Windows.Forms.Button button11;
+        private System.Windows.Forms.Button btnPromenaPrebivalista;
+        private System.Windows.Forms.Button btnUpisPrebivalista;
+        private System.Windows.Forms.Button btnOdjavaPrebivalistaSluzbeno;
+        private System.Windows.Forms.Button btnOdjavaPrebivalista;
+        private System.Windows.Forms.Button btnPromenaLicnihPodataka;
+        private System.Windows.Forms.Button btnUmrli;
+        private System.Windows.Forms.Button btnPunoletni;
+        private System.Windows.Forms.Button btnResenje;
+        private System.Windows.Forms.Button btnTrenutnoPrebivaliste;
+        private System.Windows.Forms.Button btnMku;
+        private System.Windows.Forms.Button btnMkr;
     }
 }

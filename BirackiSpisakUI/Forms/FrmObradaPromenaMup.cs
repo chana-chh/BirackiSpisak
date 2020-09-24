@@ -202,5 +202,10 @@ namespace BirackiSpisakUI.Forms
         {
             JbsMup.Zahtevi(txtJmbg.Text);
         }
+
+        private void btnPromenaPrebivalista_Click(object sender, EventArgs e)
+        {
+            JbsMup.PromeniPrebivaliste(txtJmbg.Text);
+        }
     }
 }

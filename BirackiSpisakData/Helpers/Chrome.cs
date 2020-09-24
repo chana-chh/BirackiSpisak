@@ -13,7 +13,7 @@ namespace BirackiSpisakDataManager.Helpers
     {
         private static IWebDriver _driver;
 
-        private static int _wait = 5000;
+        private static int _wait = 2000;
 
         private static string _eZupHandle;
         private static string _jbsHandle;
@@ -87,46 +87,42 @@ namespace BirackiSpisakDataManager.Helpers
         {
             WebDriverWait w = new WebDriverWait(_driver, TimeSpan.FromMilliseconds(_wait));
 
-            switch (sel)
+            var el = Element(value, sel);
+
+            if (el != null)
             {
-                case Selector.Id:
-                    w.Until(d => d.FindElement(By.Id(value)).Displayed);
-                    break;
-                case Selector.Class:
-                    w.Until(d => d.FindElement(By.ClassName(value)).Displayed);
-                    break;
-                case Selector.Css:
-                    w.Until(d => d.FindElement(By.CssSelector(value)).Displayed);
-                    break;
-                case Selector.Name:
-                    w.Until(d => d.FindElement(By.Name(value)).Displayed);
-                    break;
-                default:
-                    break;
+                w.Until(d => el.Displayed);
             }
         }
 
         public static IWebElement Element(string value, Selector sel = Selector.Id)
         {
             IWebElement el;
-
-            switch (sel)
+            try
             {
-                case Selector.Id:
-                    el = _driver.FindElement(By.Id(value));
-                    break;
-                case Selector.Class:
-                    el = _driver.FindElement(By.ClassName(value));
-                    break;
-                case Selector.Css:
-                    el = _driver.FindElement(By.CssSelector(value));
-                    break;
-                case Selector.Name:
-                    el = _driver.FindElement(By.Name(value));
-                    break;
-                default:
-                    el = null;
-                    break;
+                switch (sel)
+                {
+                    case Selector.Id:
+                        el = _driver.FindElement(By.Id(value));
+                        break;
+                    case Selector.Class:
+                        el = _driver.FindElement(By.ClassName(value));
+                        break;
+                    case Selector.Css:
+                        el = _driver.FindElement(By.CssSelector(value));
+                        break;
+                    case Selector.Name:
+                        el = _driver.FindElement(By.Name(value));
+                        break;
+                    default:
+                        el = null;
+                        break;
+                }
+            }
+            catch (NoSuchElementException)
+            {
+
+                el = null;
             }
 
             return el;

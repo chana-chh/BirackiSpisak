@@ -3,6 +3,7 @@ using OpenQA.Selenium.Support.UI;
 using System;
 using System.Collections.Generic;
 using System.Text;
+using static BirackiSpisakData.Enums;
 
 namespace BirackiSpisakDataManager.Web
 {
@@ -55,6 +56,24 @@ namespace BirackiSpisakDataManager.Web
             Chrome.ElementSelect("NalogFilterType").SelectByValue("0");
             Chrome.ElementSelect("VrstaPromene").SelectByValue("-1");
             Chrome.Element("filterMenu_submitfilter").Click();
+        }
+
+        public static void PromeniPrebivaliste(string jmbg)
+        {
+            // navigam na "https://www.birackispisak.gov.rs/Nalog/UnosNalogaPretragaBiraca/7"
+            Chrome.Idi("https://www.birackispisak.gov.rs/Nalog/UnosNalogaPretragaBiraca/7");
+            // proverim greske class="validation-summary-errors"
+            var el = Chrome.Element("validation-summary-errors", Selector.Class);
+            if (el == null)
+            {
+                // ako nema greske cekam id="Nalog_JMBG"
+                // mozda nije potrebno
+                Chrome.Cekaj("Nalog_JMBG");
+                // upisujem jmbg u id="JmbgIliRedniBroj"
+                Chrome.PopuniElement(jmbg, "JmbgIliRedniBroj");
+                // kliknem class="doc_button  button_search"
+                Chrome.Element("button_search", Selector.Class).Click();
+            }
         }
     }
 }
