@@ -73,9 +73,9 @@
             this.btnPrijava = new System.Windows.Forms.Button();
             this.btnChrome = new System.Windows.Forms.Button();
             this.pnlDugmici = new System.Windows.Forms.Panel();
-            this.btnJmbg = new System.Windows.Forms.Button();
-            this.btnZahtevi = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
+            this.btnZahtevi = new System.Windows.Forms.Button();
+            this.btnJmbg = new System.Windows.Forms.Button();
             this.pnlDugmici.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -104,13 +104,14 @@
             // txtJmbg
             // 
             this.txtJmbg.BackColor = System.Drawing.Color.White;
-            this.txtJmbg.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtJmbg.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtJmbg.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.txtJmbg.ForeColor = System.Drawing.Color.Firebrick;
             this.txtJmbg.Location = new System.Drawing.Point(56, 7);
             this.txtJmbg.MaxLength = 13;
             this.txtJmbg.Name = "txtJmbg";
-            this.txtJmbg.Size = new System.Drawing.Size(100, 25);
+            this.txtJmbg.ReadOnly = true;
+            this.txtJmbg.Size = new System.Drawing.Size(100, 18);
             this.txtJmbg.TabIndex = 2;
             // 
             // lblDatumOdredjivanjaJmbg
@@ -125,13 +126,14 @@
             // txtDatumOdredjivanjaJmbg
             // 
             this.txtDatumOdredjivanjaJmbg.BackColor = System.Drawing.Color.White;
-            this.txtDatumOdredjivanjaJmbg.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtDatumOdredjivanjaJmbg.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtDatumOdredjivanjaJmbg.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.txtDatumOdredjivanjaJmbg.ForeColor = System.Drawing.Color.Black;
             this.txtDatumOdredjivanjaJmbg.Location = new System.Drawing.Point(326, 8);
             this.txtDatumOdredjivanjaJmbg.MaxLength = 3000;
             this.txtDatumOdredjivanjaJmbg.Name = "txtDatumOdredjivanjaJmbg";
-            this.txtDatumOdredjivanjaJmbg.Size = new System.Drawing.Size(100, 25);
+            this.txtDatumOdredjivanjaJmbg.ReadOnly = true;
+            this.txtDatumOdredjivanjaJmbg.Size = new System.Drawing.Size(100, 18);
             this.txtDatumOdredjivanjaJmbg.TabIndex = 2;
             // 
             // lblBrojPromena
@@ -156,13 +158,14 @@
             // txtPol
             // 
             this.txtPol.BackColor = System.Drawing.Color.White;
-            this.txtPol.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtPol.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtPol.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.txtPol.ForeColor = System.Drawing.Color.Black;
             this.txtPol.Location = new System.Drawing.Point(470, 8);
             this.txtPol.MaxLength = 13;
             this.txtPol.Name = "txtPol";
-            this.txtPol.Size = new System.Drawing.Size(40, 25);
+            this.txtPol.ReadOnly = true;
+            this.txtPol.Size = new System.Drawing.Size(40, 18);
             this.txtPol.TabIndex = 2;
             // 
             // lblStatus
@@ -177,49 +180,53 @@
             // txtStatus
             // 
             this.txtStatus.BackColor = System.Drawing.Color.White;
-            this.txtStatus.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtStatus.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtStatus.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.txtStatus.ForeColor = System.Drawing.Color.Black;
             this.txtStatus.Location = new System.Drawing.Point(586, 9);
             this.txtStatus.MaxLength = 13;
             this.txtStatus.Name = "txtStatus";
-            this.txtStatus.Size = new System.Drawing.Size(40, 25);
+            this.txtStatus.ReadOnly = true;
+            this.txtStatus.Size = new System.Drawing.Size(40, 18);
             this.txtStatus.TabIndex = 2;
             // 
             // txtJmbgStari
             // 
             this.txtJmbgStari.BackColor = System.Drawing.Color.White;
-            this.txtJmbgStari.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtJmbgStari.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtJmbgStari.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.txtJmbgStari.ForeColor = System.Drawing.Color.Firebrick;
             this.txtJmbgStari.Location = new System.Drawing.Point(56, 38);
             this.txtJmbgStari.MaxLength = 13;
             this.txtJmbgStari.Name = "txtJmbgStari";
-            this.txtJmbgStari.Size = new System.Drawing.Size(100, 25);
+            this.txtJmbgStari.ReadOnly = true;
+            this.txtJmbgStari.Size = new System.Drawing.Size(100, 18);
             this.txtJmbgStari.TabIndex = 2;
             // 
             // txtJmbgDatumStari
             // 
             this.txtJmbgDatumStari.BackColor = System.Drawing.Color.White;
-            this.txtJmbgDatumStari.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtJmbgDatumStari.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtJmbgDatumStari.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.txtJmbgDatumStari.ForeColor = System.Drawing.Color.Firebrick;
             this.txtJmbgDatumStari.Location = new System.Drawing.Point(162, 38);
             this.txtJmbgDatumStari.MaxLength = 3000;
             this.txtJmbgDatumStari.Name = "txtJmbgDatumStari";
-            this.txtJmbgDatumStari.Size = new System.Drawing.Size(100, 25);
+            this.txtJmbgDatumStari.ReadOnly = true;
+            this.txtJmbgDatumStari.Size = new System.Drawing.Size(100, 18);
             this.txtJmbgDatumStari.TabIndex = 2;
             // 
             // txtDatumRodjenja
             // 
             this.txtDatumRodjenja.BackColor = System.Drawing.Color.White;
-            this.txtDatumRodjenja.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtDatumRodjenja.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtDatumRodjenja.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.txtDatumRodjenja.ForeColor = System.Drawing.Color.Black;
             this.txtDatumRodjenja.Location = new System.Drawing.Point(76, 69);
             this.txtDatumRodjenja.MaxLength = 3000;
             this.txtDatumRodjenja.Name = "txtDatumRodjenja";
-            this.txtDatumRodjenja.Size = new System.Drawing.Size(80, 25);
+            this.txtDatumRodjenja.ReadOnly = true;
+            this.txtDatumRodjenja.Size = new System.Drawing.Size(80, 18);
             this.txtDatumRodjenja.TabIndex = 2;
             // 
             // lblRodjenje
@@ -243,25 +250,27 @@
             // txtDatumOtpusta
             // 
             this.txtDatumOtpusta.BackColor = System.Drawing.Color.White;
-            this.txtDatumOtpusta.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtDatumOtpusta.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtDatumOtpusta.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.txtDatumOtpusta.ForeColor = System.Drawing.Color.Black;
             this.txtDatumOtpusta.Location = new System.Drawing.Point(546, 38);
             this.txtDatumOtpusta.MaxLength = 3000;
             this.txtDatumOtpusta.Name = "txtDatumOtpusta";
-            this.txtDatumOtpusta.Size = new System.Drawing.Size(80, 25);
+            this.txtDatumOtpusta.ReadOnly = true;
+            this.txtDatumOtpusta.Size = new System.Drawing.Size(80, 18);
             this.txtDatumOtpusta.TabIndex = 2;
             // 
             // txtMestoRodjenja
             // 
             this.txtMestoRodjenja.BackColor = System.Drawing.Color.White;
-            this.txtMestoRodjenja.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtMestoRodjenja.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtMestoRodjenja.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.txtMestoRodjenja.ForeColor = System.Drawing.Color.Black;
             this.txtMestoRodjenja.Location = new System.Drawing.Point(162, 69);
             this.txtMestoRodjenja.MaxLength = 3000;
             this.txtMestoRodjenja.Name = "txtMestoRodjenja";
-            this.txtMestoRodjenja.Size = new System.Drawing.Size(464, 25);
+            this.txtMestoRodjenja.ReadOnly = true;
+            this.txtMestoRodjenja.Size = new System.Drawing.Size(464, 18);
             this.txtMestoRodjenja.TabIndex = 2;
             // 
             // lblIme
@@ -276,25 +285,27 @@
             // txtIme
             // 
             this.txtIme.BackColor = System.Drawing.Color.White;
-            this.txtIme.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtIme.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtIme.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.txtIme.ForeColor = System.Drawing.Color.Black;
             this.txtIme.Location = new System.Drawing.Point(76, 112);
             this.txtIme.MaxLength = 3000;
             this.txtIme.Name = "txtIme";
-            this.txtIme.Size = new System.Drawing.Size(350, 25);
+            this.txtIme.ReadOnly = true;
+            this.txtIme.Size = new System.Drawing.Size(350, 18);
             this.txtIme.TabIndex = 2;
             // 
             // txtImeLk
             // 
             this.txtImeLk.BackColor = System.Drawing.Color.White;
-            this.txtImeLk.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtImeLk.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtImeLk.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.txtImeLk.ForeColor = System.Drawing.Color.DarkGray;
             this.txtImeLk.Location = new System.Drawing.Point(432, 112);
             this.txtImeLk.MaxLength = 3000;
             this.txtImeLk.Name = "txtImeLk";
-            this.txtImeLk.Size = new System.Drawing.Size(194, 25);
+            this.txtImeLk.ReadOnly = true;
+            this.txtImeLk.Size = new System.Drawing.Size(194, 18);
             this.txtImeLk.TabIndex = 2;
             // 
             // lblPrebivaliste
@@ -318,13 +329,14 @@
             // txtPrebivalistePrijava
             // 
             this.txtPrebivalistePrijava.BackColor = System.Drawing.Color.White;
-            this.txtPrebivalistePrijava.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtPrebivalistePrijava.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtPrebivalistePrijava.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.txtPrebivalistePrijava.ForeColor = System.Drawing.Color.Black;
             this.txtPrebivalistePrijava.Location = new System.Drawing.Point(326, 158);
             this.txtPrebivalistePrijava.MaxLength = 3000;
             this.txtPrebivalistePrijava.Name = "txtPrebivalistePrijava";
-            this.txtPrebivalistePrijava.Size = new System.Drawing.Size(80, 25);
+            this.txtPrebivalistePrijava.ReadOnly = true;
+            this.txtPrebivalistePrijava.Size = new System.Drawing.Size(80, 18);
             this.txtPrebivalistePrijava.TabIndex = 2;
             // 
             // label2
@@ -339,25 +351,27 @@
             // txtPrebivalisteOdjava
             // 
             this.txtPrebivalisteOdjava.BackColor = System.Drawing.Color.White;
-            this.txtPrebivalisteOdjava.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtPrebivalisteOdjava.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtPrebivalisteOdjava.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.txtPrebivalisteOdjava.ForeColor = System.Drawing.Color.Red;
             this.txtPrebivalisteOdjava.Location = new System.Drawing.Point(546, 158);
             this.txtPrebivalisteOdjava.MaxLength = 3000;
             this.txtPrebivalisteOdjava.Name = "txtPrebivalisteOdjava";
-            this.txtPrebivalisteOdjava.Size = new System.Drawing.Size(80, 25);
+            this.txtPrebivalisteOdjava.ReadOnly = true;
+            this.txtPrebivalisteOdjava.Size = new System.Drawing.Size(80, 18);
             this.txtPrebivalisteOdjava.TabIndex = 2;
             // 
             // txtPrebivalisteAdresa
             // 
             this.txtPrebivalisteAdresa.BackColor = System.Drawing.Color.White;
-            this.txtPrebivalisteAdresa.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtPrebivalisteAdresa.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtPrebivalisteAdresa.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.txtPrebivalisteAdresa.ForeColor = System.Drawing.Color.Black;
             this.txtPrebivalisteAdresa.Location = new System.Drawing.Point(12, 189);
             this.txtPrebivalisteAdresa.MaxLength = 3000;
             this.txtPrebivalisteAdresa.Name = "txtPrebivalisteAdresa";
-            this.txtPrebivalisteAdresa.Size = new System.Drawing.Size(614, 25);
+            this.txtPrebivalisteAdresa.ReadOnly = true;
+            this.txtPrebivalisteAdresa.Size = new System.Drawing.Size(614, 18);
             this.txtPrebivalisteAdresa.TabIndex = 2;
             // 
             // label3
@@ -393,37 +407,40 @@
             // txtBoravistePrijava
             // 
             this.txtBoravistePrijava.BackColor = System.Drawing.Color.White;
-            this.txtBoravistePrijava.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtBoravistePrijava.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtBoravistePrijava.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.txtBoravistePrijava.ForeColor = System.Drawing.Color.DimGray;
             this.txtBoravistePrijava.Location = new System.Drawing.Point(326, 230);
             this.txtBoravistePrijava.MaxLength = 3000;
             this.txtBoravistePrijava.Name = "txtBoravistePrijava";
-            this.txtBoravistePrijava.Size = new System.Drawing.Size(80, 25);
+            this.txtBoravistePrijava.ReadOnly = true;
+            this.txtBoravistePrijava.Size = new System.Drawing.Size(80, 18);
             this.txtBoravistePrijava.TabIndex = 2;
             // 
             // txtBoravisteOdjava
             // 
             this.txtBoravisteOdjava.BackColor = System.Drawing.Color.White;
-            this.txtBoravisteOdjava.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtBoravisteOdjava.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtBoravisteOdjava.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.txtBoravisteOdjava.ForeColor = System.Drawing.Color.DimGray;
             this.txtBoravisteOdjava.Location = new System.Drawing.Point(546, 230);
             this.txtBoravisteOdjava.MaxLength = 3000;
             this.txtBoravisteOdjava.Name = "txtBoravisteOdjava";
-            this.txtBoravisteOdjava.Size = new System.Drawing.Size(80, 25);
+            this.txtBoravisteOdjava.ReadOnly = true;
+            this.txtBoravisteOdjava.Size = new System.Drawing.Size(80, 18);
             this.txtBoravisteOdjava.TabIndex = 2;
             // 
             // txtBoravisteAdresa
             // 
             this.txtBoravisteAdresa.BackColor = System.Drawing.Color.White;
-            this.txtBoravisteAdresa.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtBoravisteAdresa.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtBoravisteAdresa.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.txtBoravisteAdresa.ForeColor = System.Drawing.Color.DimGray;
             this.txtBoravisteAdresa.Location = new System.Drawing.Point(12, 261);
             this.txtBoravisteAdresa.MaxLength = 3000;
             this.txtBoravisteAdresa.Name = "txtBoravisteAdresa";
-            this.txtBoravisteAdresa.Size = new System.Drawing.Size(614, 25);
+            this.txtBoravisteAdresa.ReadOnly = true;
+            this.txtBoravisteAdresa.Size = new System.Drawing.Size(614, 18);
             this.txtBoravisteAdresa.TabIndex = 2;
             // 
             // label6
@@ -447,37 +464,40 @@
             // txtDatumFajla
             // 
             this.txtDatumFajla.BackColor = System.Drawing.Color.White;
-            this.txtDatumFajla.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtDatumFajla.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtDatumFajla.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.txtDatumFajla.ForeColor = System.Drawing.Color.Black;
             this.txtDatumFajla.Location = new System.Drawing.Point(99, 301);
             this.txtDatumFajla.MaxLength = 3000;
             this.txtDatumFajla.Name = "txtDatumFajla";
-            this.txtDatumFajla.Size = new System.Drawing.Size(80, 25);
+            this.txtDatumFajla.ReadOnly = true;
+            this.txtDatumFajla.Size = new System.Drawing.Size(80, 18);
             this.txtDatumFajla.TabIndex = 2;
             // 
             // txtDatumPromene
             // 
             this.txtDatumPromene.BackColor = System.Drawing.Color.White;
-            this.txtDatumPromene.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtDatumPromene.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtDatumPromene.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.txtDatumPromene.ForeColor = System.Drawing.Color.Black;
             this.txtDatumPromene.Location = new System.Drawing.Point(546, 301);
             this.txtDatumPromene.MaxLength = 3000;
             this.txtDatumPromene.Name = "txtDatumPromene";
-            this.txtDatumPromene.Size = new System.Drawing.Size(80, 25);
+            this.txtDatumPromene.ReadOnly = true;
+            this.txtDatumPromene.Size = new System.Drawing.Size(80, 18);
             this.txtDatumPromene.TabIndex = 2;
             // 
             // txtVrstaPromene
             // 
             this.txtVrstaPromene.BackColor = System.Drawing.Color.White;
-            this.txtVrstaPromene.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtVrstaPromene.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtVrstaPromene.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.txtVrstaPromene.ForeColor = System.Drawing.Color.Black;
             this.txtVrstaPromene.Location = new System.Drawing.Point(12, 332);
             this.txtVrstaPromene.MaxLength = 3000;
             this.txtVrstaPromene.Multiline = true;
             this.txtVrstaPromene.Name = "txtVrstaPromene";
+            this.txtVrstaPromene.ReadOnly = true;
             this.txtVrstaPromene.Size = new System.Drawing.Size(614, 50);
             this.txtVrstaPromene.TabIndex = 2;
             // 
@@ -538,6 +558,7 @@
             // 
             this.btnPrijava.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnPrijava.BackgroundImage")));
             this.btnPrijava.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.btnPrijava.Enabled = false;
             this.btnPrijava.FlatAppearance.MouseOverBackColor = System.Drawing.Color.AliceBlue;
             this.btnPrijava.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnPrijava.Location = new System.Drawing.Point(232, 553);
@@ -565,34 +586,11 @@
             this.pnlDugmici.Controls.Add(this.button2);
             this.pnlDugmici.Controls.Add(this.btnZahtevi);
             this.pnlDugmici.Controls.Add(this.btnJmbg);
+            this.pnlDugmici.Enabled = false;
             this.pnlDugmici.Location = new System.Drawing.Point(12, 385);
             this.pnlDugmici.Name = "pnlDugmici";
             this.pnlDugmici.Size = new System.Drawing.Size(614, 135);
             this.pnlDugmici.TabIndex = 6;
-            // 
-            // btnJmbg
-            // 
-            this.btnJmbg.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Gainsboro;
-            this.btnJmbg.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnJmbg.Location = new System.Drawing.Point(0, 3);
-            this.btnJmbg.Name = "btnJmbg";
-            this.btnJmbg.Size = new System.Drawing.Size(75, 30);
-            this.btnJmbg.TabIndex = 0;
-            this.btnJmbg.Text = "ЈМБГ";
-            this.btnJmbg.UseVisualStyleBackColor = true;
-            this.btnJmbg.Click += new System.EventHandler(this.btnJmbg_Click);
-            // 
-            // btnZahtevi
-            // 
-            this.btnZahtevi.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Gainsboro;
-            this.btnZahtevi.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnZahtevi.Location = new System.Drawing.Point(81, 3);
-            this.btnZahtevi.Name = "btnZahtevi";
-            this.btnZahtevi.Size = new System.Drawing.Size(75, 30);
-            this.btnZahtevi.TabIndex = 0;
-            this.btnZahtevi.Text = "Захтеви";
-            this.btnZahtevi.UseVisualStyleBackColor = true;
-            this.btnZahtevi.Click += new System.EventHandler(this.btnZahtevi_Click);
             // 
             // button2
             // 
@@ -604,6 +602,30 @@
             this.button2.TabIndex = 0;
             this.button2.Text = "ЈМБГ";
             this.button2.UseVisualStyleBackColor = true;
+            // 
+            // btnZahtevi
+            // 
+            this.btnZahtevi.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Gainsboro;
+            this.btnZahtevi.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnZahtevi.Location = new System.Drawing.Point(76, 0);
+            this.btnZahtevi.Name = "btnZahtevi";
+            this.btnZahtevi.Size = new System.Drawing.Size(75, 30);
+            this.btnZahtevi.TabIndex = 0;
+            this.btnZahtevi.Text = "Захтеви";
+            this.btnZahtevi.UseVisualStyleBackColor = true;
+            this.btnZahtevi.Click += new System.EventHandler(this.btnZahtevi_Click);
+            // 
+            // btnJmbg
+            // 
+            this.btnJmbg.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Gainsboro;
+            this.btnJmbg.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnJmbg.Location = new System.Drawing.Point(0, 0);
+            this.btnJmbg.Name = "btnJmbg";
+            this.btnJmbg.Size = new System.Drawing.Size(75, 30);
+            this.btnJmbg.TabIndex = 0;
+            this.btnJmbg.Text = "ЈМБГ";
+            this.btnJmbg.UseVisualStyleBackColor = true;
+            this.btnJmbg.Click += new System.EventHandler(this.btnJmbg_Click);
             // 
             // FrmObradaPromenaMup
             // 

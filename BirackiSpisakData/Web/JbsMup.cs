@@ -41,10 +41,16 @@ namespace BirackiSpisakDataManager.Web
         public static void Jmbg(string jmbg)
         {
             Chrome.JbsTab();
-            Chrome.Idi("https://www.birackispisak.gov.rs/Birac/ListaBiraca");
-            var el = Chrome.Element("filterMenu_FilterBox_0");
-            el.Clear();
-            el.SendKeys(jmbg);
+            if (Chrome.TrenutnaAdresa().Equals("https://www.birackispisak.gov.rs/Birac/AdvancedSearch/1"))
+            {
+                Chrome.Idi("https://www.birackispisak.gov.rs/Birac/AdvancedSearch/0");
+            }
+            else
+            {
+                Chrome.Idi("https://www.birackispisak.gov.rs/Birac/ListaBiraca");
+            }
+
+            Chrome.PopuniElement(jmbg, "filterMenu_FilterBox_0");
             Chrome.ElementSelect("BrzaPretragaFilterType").SelectByValue("1");
             Chrome.Element("filterMenu_submitfilter").Click();
         }

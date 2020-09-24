@@ -33,6 +33,11 @@ namespace BirackiSpisakDataManager.Helpers
             _jbsHandle = _driver.CurrentWindowHandle;
         }
 
+        public static string TrenutnaAdresa()
+        {
+            return _driver.Url;
+        }
+
         public static void OdrediEZupHandle()
         {
             if (ImaDvaTaba())
@@ -119,6 +124,13 @@ namespace BirackiSpisakDataManager.Helpers
             }
 
             return el;
+        }
+
+        public static void PopuniElement(string value, string css, Selector sel = Selector.Id)
+        {
+            IWebElement el = Element(css, sel);
+            el.Clear();
+            el.SendKeys(value);
         }
 
         public static SelectElement ElementSelect(string value, Selector sel = Selector.Id)
