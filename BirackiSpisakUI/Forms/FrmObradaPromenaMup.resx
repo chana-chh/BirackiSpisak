@@ -130,7 +130,7 @@
   <data name="btnPrethodni.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing.Common" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAB
-        UwAAAVMBVlwD6QAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAADNSURBVEhLvZbb
+        UAAAAVAB++UihAAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAADNSURBVEhLvZbb
         CcJAFETXf6uyFHuwDX99V2Mt1rGewVwQmWSTDdcD58NhmQHNw1Jr7RY2eMQX7uwZF85xKH+gPsiDPefC
         lqDy+1Asn7i1Z104Jaj8hs1yacMxYVG5tKETVH7F2eXShr9CV7m04beg8gsuLpc2DEHlZ+wqlzaUsLpc
         +vBTfsJV5dKHpeyH4lXl0od/GMj9iiTk/cgh5F2mIWgk50YLQSM5j4oQukZsOCZoJOdxHcKiERu2BI3k
@@ -143,7 +143,7 @@
   <data name="btnSledeci.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing.Common" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAB
-        UwAAAVMBVlwD6QAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAADFSURBVEhLtZbL
+        UAAAAVAB++UihAAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAADFSURBVEhLtZbL
         CcMwEAU391SVUtJD2sg1/2pSS+pQZg+CsHqxJVkaGDAPsQ9kLNlSSoVwwA+ecafW1KpDsxP6g/vC7hId
         mu3xjbnkiV0lMnQhljywuUSGWdhcIsNfIZbcsbpEhlHoLpGhEmLJDVdLZPhPiCVXXCyR4ZLQVCLDNSGW
         XFCWFEGtEEuOcp0Ka4R5BTBvi2DeS4am4a4MlRCHj/vQIA4fd1RA93BXhlmIw8cd17B5uKvDcvjYKxOm
@@ -199,7 +199,7 @@
   <data name="btnChrome.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing.Common" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAA
-        qgAAAKoBBgpwTwAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAAJcSURBVEhLnZa5
+        qAAAAKgBefSzxgAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAAJcSURBVEhLnZa5
         axVBHMdXGwvPKAriWSQi2FvY+A+oYArxamxsYtSoiL1g5dFrCrtACjVFIigWgp2F2HlgZxSNTaIEknh9
         PsPOc3fe7Mt7fuHz2JmdmZ35XfOKZbQTzsFjeAs/St6Ufb5zTM/aDqPwExbgCdyCS3AZbsNTWIQluAfO
         6UpHYA5m4CKsgyathxFwrHMOQ0cNwy94AJ0WTuWHHoJzXSMrd+6Am7DCjh61EjSja7SdRPt5xNfwP4tH
@@ -213,6 +213,9 @@
         TEZdAAAAAElFTkSuQmCC
 </value>
   </data>
+  <metadata name="pnlDugmici.Locked" type="System.Boolean, System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e">
+    <value>True</value>
+  </metadata>
   <metadata name="$this.Locked" type="System.Boolean, System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e">
     <value>True</value>
   </metadata>

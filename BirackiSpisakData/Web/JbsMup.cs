@@ -41,17 +41,19 @@ namespace BirackiSpisakDataManager.Web
         public static void Jmbg(string jmbg)
         {
             Chrome.JbsTab();
-            if (Chrome.TrenutnaAdresa().Equals("https://www.birackispisak.gov.rs/Birac/AdvancedSearch/1"))
-            {
-                Chrome.Idi("https://www.birackispisak.gov.rs/Birac/AdvancedSearch/0");
-            }
-            else
-            {
-                Chrome.Idi("https://www.birackispisak.gov.rs/Birac/ListaBiraca");
-            }
-
+            Chrome.Idi("https://www.birackispisak.gov.rs/Birac/AdvancedSearch/0");
             Chrome.PopuniElement(jmbg, "filterMenu_FilterBox_0");
             Chrome.ElementSelect("BrzaPretragaFilterType").SelectByValue("1");
+            Chrome.Element("filterMenu_submitfilter").Click();
+        }
+
+        public static void Zahtevi(string jmbg)
+        {
+            Chrome.JbsTab();
+            Chrome.Idi("https://www.birackispisak.gov.rs/Nalog/ListaNaloga/-1");
+            Chrome.PopuniElement(jmbg, "filterMenu_FilterBox_0");
+            Chrome.ElementSelect("NalogFilterType").SelectByValue("0");
+            Chrome.ElementSelect("VrstaPromene").SelectByValue("-1");
             Chrome.Element("filterMenu_submitfilter").Click();
         }
     }

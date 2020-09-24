@@ -168,14 +168,16 @@ namespace BirackiSpisakUI.Forms
         private void btnChrome_Click(object sender, EventArgs e)
         {
             JbsMup.OtvoriChrome();
+            btnPrijava.Enabled = true;
         }
 
         private void btnPrijava_Click(object sender, EventArgs e)
         {
             if (JbsMup.PripremiChrome())
             {
-                // Ako je sve OK omoguciti dugmice za rad sa eZup i JBS
-
+                btnChrome.Enabled = false;
+                pnlDugmici.Enabled = true;
+                btnPrijava.Enabled = false;
             }
             else
             {
@@ -198,7 +200,7 @@ namespace BirackiSpisakUI.Forms
 
         private void btnZahtevi_Click(object sender, EventArgs e)
         {
-            JbsMup.Jbs();
+            JbsMup.Zahtevi(txtJmbg.Text);
         }
     }
 }

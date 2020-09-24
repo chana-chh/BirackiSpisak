@@ -11,7 +11,7 @@ namespace BirackiSpisakDataManager.Helpers
 {
     public static class Chrome
     {
-        private static IWebDriver _driver = new ChromeDriver();
+        private static IWebDriver _driver;
 
         private static int _wait = 5000;
 
@@ -23,8 +23,14 @@ namespace BirackiSpisakDataManager.Helpers
             _driver.Navigate().GoToUrl(url);
         }
 
+        private static void Init()
+        {
+            _driver = _driver = new ChromeDriver();
+        }
+
         public static void OtvoriJBSiZUP()
         {
+            Init();
             PodesiProzor();
             Idi("https://euprava.gov.rs");
             _eZupHandle = _driver.CurrentWindowHandle;
@@ -146,7 +152,10 @@ namespace BirackiSpisakDataManager.Helpers
 
         public static void Zatvori()
         {
-            _driver.Quit();
+            if (_driver != null)
+            {
+                _driver.Quit();
+            }
         }
     }
 }
