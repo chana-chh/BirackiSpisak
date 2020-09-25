@@ -151,8 +151,9 @@
             // 
             // lblBrojPromena
             // 
-            this.lblBrojPromena.ForeColor = System.Drawing.Color.Red;
-            this.lblBrojPromena.Location = new System.Drawing.Point(48, 560);
+            this.lblBrojPromena.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.lblBrojPromena.ForeColor = System.Drawing.Color.OrangeRed;
+            this.lblBrojPromena.Location = new System.Drawing.Point(48, 557);
             this.lblBrojPromena.Name = "lblBrojPromena";
             this.lblBrojPromena.Size = new System.Drawing.Size(80, 20);
             this.lblBrojPromena.TabIndex = 4;
@@ -643,6 +644,7 @@
             this.btnAdresa.TabIndex = 0;
             this.btnAdresa.Text = "Упиши адресу";
             this.btnAdresa.UseVisualStyleBackColor = false;
+            this.btnAdresa.Click += new System.EventHandler(this.btnAdresa_Click);
             // 
             // btnUpisPrebivalista
             // 
@@ -656,6 +658,7 @@
             this.btnUpisPrebivalista.TabIndex = 0;
             this.btnUpisPrebivalista.Text = "Упис преб";
             this.btnUpisPrebivalista.UseVisualStyleBackColor = false;
+            this.btnUpisPrebivalista.Click += new System.EventHandler(this.btnUpisPrebivalista_Click);
             // 
             // btnOdjavaPrebivalistaSluzbeno
             // 
@@ -748,6 +751,7 @@
             this.btnResenje.TabIndex = 0;
             this.btnResenje.Text = "РШЕЊЕ";
             this.btnResenje.UseVisualStyleBackColor = false;
+            this.btnResenje.Click += new System.EventHandler(this.btnResenje_Click);
             // 
             // btnTrenutnoPrebivaliste
             // 
@@ -803,7 +807,7 @@
             // 
             // btnZahtevi
             // 
-            this.btnZahtevi.BackColor = System.Drawing.Color.PaleGoldenrod;
+            this.btnZahtevi.BackColor = System.Drawing.Color.Gold;
             this.btnZahtevi.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Gainsboro;
             this.btnZahtevi.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnZahtevi.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
@@ -817,7 +821,7 @@
             // 
             // btnJmbg
             // 
-            this.btnJmbg.BackColor = System.Drawing.Color.PaleGoldenrod;
+            this.btnJmbg.BackColor = System.Drawing.Color.Gold;
             this.btnJmbg.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Gainsboro;
             this.btnJmbg.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnJmbg.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);

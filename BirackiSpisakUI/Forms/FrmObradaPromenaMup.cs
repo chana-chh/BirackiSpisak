@@ -1,4 +1,5 @@
-﻿using BirackiSpisakDataManager.Models;
+﻿using BirackiSpisakDataManager.Helpers;
+using BirackiSpisakDataManager.Models;
 using BirackiSpisakDataManager.ModelsData;
 using BirackiSpisakDataManager.Web;
 using System;
@@ -34,6 +35,7 @@ namespace BirackiSpisakUI.Forms
             if (_lista.Count > 0)
             {
                 _promena = _lista[index];
+                ProveriGreske(_promena);
                 txtJmbg.Text = _promena.Jmbg;
                 txtDatumOdredjivanjaJmbg.Text = _promena.DatumOdredjivanjaJmbg != null ? _promena.DatumOdredjivanjaJmbg.Value.ToShortDateString() : "";
                 txtPol.Text = _promena.Pol.Equals("M") ? "М" : "Ж";
@@ -83,6 +85,53 @@ namespace BirackiSpisakUI.Forms
             }
         }
 
+        private void ProveriGreske(Mup promena)
+        {
+            string greske = "";
+            if (!Jmbg.IsOK(promena.Jmbg))
+            {
+                greske += "ЈМБГ: Није исправан!" + Environment.NewLine;
+            }
+            else
+            {
+                int razlika = DateTime.Compare((DateTime)Dates.DobFromJmbg(promena.Jmbg), (DateTime)promena.DatumRodjenja);
+                if (razlika != 0)
+                {
+                    greske += "ЈМБГ: Датум рођења се не слаже са ЈМБГ!" + Environment.NewLine;
+                }
+            }
+
+            if (!string.IsNullOrEmpty(promena.JmbgStari))
+            {
+                greske += "ЈМБГ: Постоји стари ЈМБГ!" + Environment.NewLine;
+            }
+
+            if (promena.Status.Equals("U"))
+            {
+                greske += "СТАТУС: Умрло лице!" + Environment.NewLine;
+            }
+
+            if (promena.DatumOtpustaIzDrzavljanstva != null)
+            {
+                greske += "ОТПУСТ: Отпуст из држављанства!" + Environment.NewLine;
+            }
+
+            if (promena.DatumPrijaveAdrese == null)
+            {
+                greske += "ПРЕБИВАЛИШТЕ: Нема пријаву пребивалишта!" + Environment.NewLine;
+            }
+
+            if (!string.IsNullOrEmpty(promena.DatumOdjaveAdrese.ToString()))
+            {
+                greske += "ПРЕБИВАЛИШТЕ: Одјава пребивалишта!" + Environment.NewLine;
+            }
+
+            if (!string.IsNullOrEmpty(greske))
+            {
+                MessageBox.Show(greske, "МУП промене", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
         private void btnIzlaz_Click(object sender, EventArgs e)
         {
             Close();
@@ -90,6 +139,7 @@ namespace BirackiSpisakUI.Forms
 
         private void btnPrethodni_Click(object sender, EventArgs e)
         {
+            _lista = _mupData.SveNeresenePromene();
             if (_indeks > 0)
             {
                 _indeks -= 1;
@@ -99,11 +149,16 @@ namespace BirackiSpisakUI.Forms
 
         private void btnSledeci_Click(object sender, EventArgs e)
         {
+            _lista = _mupData.SveNeresenePromene();
             if (_indeks < _lista.Count - 1)
             {
                 _indeks += 1;
-                PrikaziPromenu(_indeks);
             }
+            else
+            {
+                _indeks = _lista.Count - 1;
+            }
+            PrikaziPromenu(_indeks);
         }
 
         private void btnDokaz_Click(object sender, EventArgs e)
@@ -156,10 +211,10 @@ namespace BirackiSpisakUI.Forms
                 _promena.Datum = DateTime.Now;
                 _promena.Referent = _korisnik.PunoIme;
                 _mupData.ResiPromenu(_promena);
-                _lista.RemoveAt(_indeks);
+                _lista = _mupData.SveNeresenePromene();
                 if (_indeks >= _lista.Count)
                 {
-                    _indeks -= 1;
+                    _indeks = _lista.Count - 1;
                 }
             }
             PrikaziPromenu(_indeks);
@@ -205,7 +260,23 @@ namespace BirackiSpisakUI.Forms
 
         private void btnPromenaPrebivalista_Click(object sender, EventArgs e)
         {
-            JbsMup.PromeniPrebivaliste(txtJmbg.Text);
+            JbsMup.PromeniPrebivaliste(_promena);
+        }
+
+        private void btnAdresa_Click(object sender, EventArgs e)
+        {
+            JbsMup.UpisiAdresu(_promena);
+        }
+
+        private void btnResenje_Click(object sender, EventArgs e)
+        {
+            JbsMup.PopuniOvlascenje();
+            JbsMup.PopuniResenje(_promena);
+        }
+
+        private void btnUpisPrebivalista_Click(object sender, EventArgs e)
+        {
+            JbsMup.UpisiPrebivaliste(_promena);
         }
     }
 }
