@@ -13,7 +13,7 @@ namespace BirackiSpisakDataManager.Helpers
     {
         private static IWebDriver _driver;
 
-        private static int _wait = 2000;
+        private static int _wait = 10000;
 
         private static string _eZupHandle;
         private static string _jbsHandle;

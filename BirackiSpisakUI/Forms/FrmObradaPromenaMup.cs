@@ -222,13 +222,13 @@ namespace BirackiSpisakUI.Forms
 
         private void btnChrome_Click(object sender, EventArgs e)
         {
-            JbsMup.OtvoriChrome();
+            JbsMupWeb.OtvoriChrome();
             btnPrijava.Enabled = true;
         }
 
         private void btnPrijava_Click(object sender, EventArgs e)
         {
-            if (JbsMup.PripremiChrome())
+            if (JbsMupWeb.PripremiChrome())
             {
                 btnChrome.Enabled = false;
                 pnlDugmici.Enabled = true;
@@ -245,52 +245,52 @@ namespace BirackiSpisakUI.Forms
 
         private void FrmObradaPromenaMup_FormClosed(object sender, FormClosedEventArgs e)
         {
-            JbsMup.ZatvoriChrome();
+            JbsMupWeb.ZatvoriChrome();
         }
 
         private void btnJmbg_Click(object sender, EventArgs e)
         {
-            JbsMup.Jmbg(txtJmbg.Text);
+            JbsMupWeb.Jmbg(txtJmbg.Text);
         }
 
         private void btnZahtevi_Click(object sender, EventArgs e)
         {
-            JbsMup.Zahtevi(txtJmbg.Text);
+            JbsMupWeb.Zahtevi(txtJmbg.Text);
         }
 
         private void btnAdresa_Click(object sender, EventArgs e)
         {
-            JbsMup.UpisiAdresu(_promena);
+            JbsMupWeb.UpisiAdresu(_promena);
         }
         private void btnLicniPodaci_Click(object sender, EventArgs e)
         {
-            JbsMup.UpisiLicnePodatke(_promena, true, true);
+            JbsMupWeb.UpisiLicnePodatke(_promena, true, true);
         }
 
         private void btnResenje_Click(object sender, EventArgs e)
         {
-            JbsMup.PopuniOvlascenje();
-            JbsMup.PopuniResenje(_promena);
+            JbsMupWeb.PopuniOvlascenje();
+            JbsMupWeb.PopuniResenje(_promena);
         }
 
         private void btnPromenaPrebivalista_Click(object sender, EventArgs e)
         {
-            JbsMup.PromeniPrebivaliste(_promena);
+            JbsMupWeb.PromeniPrebivaliste(_promena);
         }
 
         private void btnUpisPrebivalista_Click(object sender, EventArgs e)
         {
-            JbsMup.UpisiPrebivaliste(_promena);
+            JbsMupWeb.UpisiPrebivaliste(_promena);
         }
 
         private void btnPunoletni_Click(object sender, EventArgs e)
         {
-            JbsMup.UpisiPunoletnoLice(_promena);
+            JbsMupWeb.UpisiPunoletnoLice(_promena);
         }
 
         private void btnPromenaLicnihPodataka_Click(object sender, EventArgs e)
         {
-            JbsMup.PromeniLicnePodatke(_promena);
+            JbsMupWeb.PromeniLicnePodatke(_promena);
         }
 
         private void btnUmrli_Click(object sender, EventArgs e)
@@ -300,12 +300,32 @@ namespace BirackiSpisakUI.Forms
 
         private void btnOdjavaPrebivalista_Click(object sender, EventArgs e)
         {
-            JbsMup.OdjaviPrebivaliste(_promena);
+            JbsMupWeb.OdjaviPrebivaliste(_promena);
         }
 
         private void btnOdjavaPrebivalistaSluzbeno_Click(object sender, EventArgs e)
         {
-            JbsMup.OdjaviPrebivalisteSluzbeno(_promena);
+            JbsMupWeb.OdjaviPrebivalisteSluzbeno(_promena);
+        }
+
+        private void btnTrenutnoPrebivaliste_Click(object sender, EventArgs e)
+        {
+            ZupWeb.TrenutnoPrebivaliste(_promena);
+        }
+
+        private void btnMkr_Click(object sender, EventArgs e)
+        {
+            ZupWeb.Mkr(_promena);
+        }
+
+        private void btnMku_Click(object sender, EventArgs e)
+        {
+            ZupWeb.Mku(_promena);
+        }
+
+        private void btnMkv_Click(object sender, EventArgs e)
+        {
+            ZupWeb.Mkv(_promena);
         }
     }
 }

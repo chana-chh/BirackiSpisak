@@ -9,7 +9,7 @@ using static BirackiSpisakData.Enums;
 
 namespace BirackiSpisakDataManager.Web
 {
-    public static class JbsMup
+    public static class JbsMupWeb
     {
         public static void OtvoriChrome()
         {
@@ -29,16 +29,6 @@ namespace BirackiSpisakDataManager.Web
         public static void ZatvoriChrome()
         {
             Chrome.Zatvori();
-        }
-
-        public static void Zup()
-        {
-            Chrome.EzupTab();
-        }
-
-        public static void Jbs()
-        {
-            Chrome.JbsTab();
         }
 
         public static void Jmbg(string jmbg)
@@ -62,6 +52,7 @@ namespace BirackiSpisakDataManager.Web
 
         public static void UpisiAdresu(Mup promena, bool podvrsta = false)
         {
+            Chrome.JbsTab();
             Chrome.Cekaj("Nalog_JMBG");
             var jmbg = Chrome.Element("Nalog_JMBG");
             if (jmbg != null)
@@ -86,22 +77,18 @@ namespace BirackiSpisakDataManager.Web
 
         public static void UpisiLicnePodatke(Mup promena, bool podvrsta = false, bool upisiJmbg = false)
         {
+            Chrome.JbsTab();
             Chrome.Cekaj("Nalog_JMBG");
-
             var jmbg = Chrome.Element("Nalog_JMBG");
-
             if (jmbg != null)
             {
                 var muski = Chrome.Element("Nalog.Pol_True");
                 var zenski = Chrome.Element("Nalog.Pol_False");
-
                 string datumRodjenja = promena.DatumRodjenja.Value.ToShortDateString();
                 string d = datumRodjenja.Substring(0, 2);
                 string m = datumRodjenja.Substring(3, 2);
                 string g = datumRodjenja.Substring(6, 4);
-
                 bool pol = promena.Pol.Equals("M") ? true : false;
-
                 string mr = (String.IsNullOrEmpty(promena.MestoRodjenja))
                             ? $"{Converter.LatToCyr(promena.DrzavaRodjenja)}, {Converter.LatToCyr(promena.StranoMestoRodjenja)}"
                             : Converter.LatToCyr(promena.MestoRodjenja);
@@ -133,6 +120,7 @@ namespace BirackiSpisakDataManager.Web
 
         public static void PopuniOvlascenje()
         {
+            Chrome.JbsTab();
             Chrome.PopuniElement(ConfigurationManager.AppSettings["BrojOvlascenja"], "Resenje_OvlascenjeBroj");
             Chrome.PopuniElement(ConfigurationManager.AppSettings["DanOvlascenja"], "Resenje_OvlascenjeDatum_Day");
             Chrome.PopuniElement(ConfigurationManager.AppSettings["MesecOvlascenja"], "Resenje_OvlascenjeDatum_Month");
@@ -141,11 +129,11 @@ namespace BirackiSpisakDataManager.Web
 
         public static void PopuniResenje(Mup promena)
         {
+            Chrome.JbsTab();
             string datum = promena.DatumFajla.Value.ToShortDateString();
             string d = datum.Substring(0, 2);
             string m = datum.Substring(3, 2);
             string g = datum.Substring(6, 4);
-
             Chrome.PopuniElement("МУП СРБИЈЕ", "Resenje_ObrazlozenjeMUP");
             Chrome.PopuniElement("/", "Resenje_ObrazlozenjeBrojAktaMUP");
             Chrome.PopuniElement(d, "Resenje_ObrazlozenjeDatumAktaMUP_Day");
@@ -155,6 +143,7 @@ namespace BirackiSpisakDataManager.Web
 
         private static void PopuniJmbg(Mup promena)
         {
+            Chrome.JbsTab();
             var el = Chrome.Element("validation-summary-errors", Selector.Class);
             if (el == null)
             {
@@ -166,6 +155,7 @@ namespace BirackiSpisakDataManager.Web
 
         public static void UpisiPrebivaliste(Mup promena)
         {
+            Chrome.JbsTab();
             Chrome.Idi("https://www.birackispisak.gov.rs/Nalog/UnosNalogaPretragaBiraca/2");
             PopuniJmbg(promena);
             var prezime = Chrome.Element("Nalog_Prezime");
@@ -178,6 +168,7 @@ namespace BirackiSpisakDataManager.Web
 
         public static void PromeniPrebivaliste(Mup promena)
         {
+            Chrome.JbsTab();
             Chrome.Idi("https://www.birackispisak.gov.rs/Nalog/UnosNalogaPretragaBiraca/7");
             PopuniJmbg(promena);
             UpisiAdresu(promena, true);
@@ -185,6 +176,7 @@ namespace BirackiSpisakDataManager.Web
 
         public static void UpisiPunoletnoLice(Mup promena)
         {
+            Chrome.JbsTab();
             Chrome.Idi("https://www.birackispisak.gov.rs/Nalog/UnosNaloga/1");
             UpisiLicnePodatke(promena, false, true);
             UpisiAdresu(promena, true);
@@ -192,6 +184,7 @@ namespace BirackiSpisakDataManager.Web
 
         public static void PromeniLicnePodatke(Mup promena)
         {
+            Chrome.JbsTab();
             Chrome.Idi("https://www.birackispisak.gov.rs/Nalog/UnosNalogaPretragaBiraca/6");
             PopuniJmbg(promena);
             UpisiLicnePodatke(promena, true);
@@ -199,12 +192,14 @@ namespace BirackiSpisakDataManager.Web
 
         public static void OdjaviPrebivaliste(Mup promena)
         {
+            Chrome.JbsTab();
             Chrome.Idi("https://www.birackispisak.gov.rs/Nalog/UnosNalogaPretragaBiraca/13");
             PopuniJmbg(promena);
         }
 
         public static void OdjaviPrebivalisteSluzbeno(Mup promena)
         {
+            Chrome.JbsTab();
             Chrome.Idi("https://www.birackispisak.gov.rs/Nalog/UnosNalogaPretragaBiraca/32");
             PopuniJmbg(promena);
         }

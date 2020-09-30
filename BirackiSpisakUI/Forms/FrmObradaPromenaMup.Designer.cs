@@ -727,7 +727,7 @@
             this.btnUmrli.Name = "btnUmrli";
             this.btnUmrli.Size = new System.Drawing.Size(100, 30);
             this.btnUmrli.TabIndex = 0;
-            this.btnUmrli.Text = "Умрли";
+            this.btnUmrli.Text = "Пун МКР";
             this.btnUmrli.UseVisualStyleBackColor = false;
             this.btnUmrli.Click += new System.EventHandler(this.btnUmrli_Click);
             // 
@@ -771,6 +771,7 @@
             this.btnTrenutnoPrebivaliste.TabIndex = 0;
             this.btnTrenutnoPrebivaliste.Text = "Тренутно преб";
             this.btnTrenutnoPrebivaliste.UseVisualStyleBackColor = false;
+            this.btnTrenutnoPrebivaliste.Click += new System.EventHandler(this.btnTrenutnoPrebivaliste_Click);
             // 
             // btnMku
             // 
@@ -784,6 +785,7 @@
             this.btnMku.TabIndex = 0;
             this.btnMku.Text = "МКУ";
             this.btnMku.UseVisualStyleBackColor = false;
+            this.btnMku.Click += new System.EventHandler(this.btnMku_Click);
             // 
             // btnMkr
             // 
@@ -797,6 +799,7 @@
             this.btnMkr.TabIndex = 0;
             this.btnMkr.Text = "МКР";
             this.btnMkr.UseVisualStyleBackColor = false;
+            this.btnMkr.Click += new System.EventHandler(this.btnMkr_Click);
             // 
             // btnMkv
             // 
@@ -810,6 +813,7 @@
             this.btnMkv.TabIndex = 0;
             this.btnMkv.Text = "МКВ";
             this.btnMkv.UseVisualStyleBackColor = false;
+            this.btnMkv.Click += new System.EventHandler(this.btnMkv_Click);
             // 
             // btnZahtevi
             // 
