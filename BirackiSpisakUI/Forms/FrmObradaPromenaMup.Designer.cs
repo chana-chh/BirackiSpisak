@@ -631,6 +631,7 @@
             this.btnLicniPodaci.TabIndex = 0;
             this.btnLicniPodaci.Text = "Упиши ЛП";
             this.btnLicniPodaci.UseVisualStyleBackColor = false;
+            this.btnLicniPodaci.Click += new System.EventHandler(this.btnLicniPodaci_Click);
             // 
             // btnAdresa
             // 
@@ -672,6 +673,7 @@
             this.btnOdjavaPrebivalistaSluzbeno.TabIndex = 0;
             this.btnOdjavaPrebivalistaSluzbeno.Text = "Одјава СЛ";
             this.btnOdjavaPrebivalistaSluzbeno.UseVisualStyleBackColor = false;
+            this.btnOdjavaPrebivalistaSluzbeno.Click += new System.EventHandler(this.btnOdjavaPrebivalistaSluzbeno_Click);
             // 
             // btnOdjavaPrebivalista
             // 
@@ -685,6 +687,7 @@
             this.btnOdjavaPrebivalista.TabIndex = 0;
             this.btnOdjavaPrebivalista.Text = "Одјава преб";
             this.btnOdjavaPrebivalista.UseVisualStyleBackColor = false;
+            this.btnOdjavaPrebivalista.Click += new System.EventHandler(this.btnOdjavaPrebivalista_Click);
             // 
             // btnPromenaLicnihPodataka
             // 
@@ -698,6 +701,7 @@
             this.btnPromenaLicnihPodataka.TabIndex = 0;
             this.btnPromenaLicnihPodataka.Text = "Промена ЛП";
             this.btnPromenaLicnihPodataka.UseVisualStyleBackColor = false;
+            this.btnPromenaLicnihPodataka.Click += new System.EventHandler(this.btnPromenaLicnihPodataka_Click);
             // 
             // btnPromenaPrebivalista
             // 
@@ -725,6 +729,7 @@
             this.btnUmrli.TabIndex = 0;
             this.btnUmrli.Text = "Умрли";
             this.btnUmrli.UseVisualStyleBackColor = false;
+            this.btnUmrli.Click += new System.EventHandler(this.btnUmrli_Click);
             // 
             // btnPunoletni
             // 
@@ -738,6 +743,7 @@
             this.btnPunoletni.TabIndex = 0;
             this.btnPunoletni.Text = "Пунолетни";
             this.btnPunoletni.UseVisualStyleBackColor = false;
+            this.btnPunoletni.Click += new System.EventHandler(this.btnPunoletni_Click);
             // 
             // btnResenje
             // 

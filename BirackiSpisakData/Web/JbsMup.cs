@@ -60,20 +60,31 @@ namespace BirackiSpisakDataManager.Web
             Chrome.Element("filterMenu_submitfilter").Click();
         }
 
-        public static void PromeniPrebivaliste(Mup promena)
+        public static void UpisiAdresu(Mup promena, bool podvrsta = false)
         {
-            Chrome.Idi("https://www.birackispisak.gov.rs/Nalog/UnosNalogaPretragaBiraca/7");
-            var el = Chrome.Element("validation-summary-errors", Selector.Class);
-            if (el == null)
+            Chrome.Cekaj("Nalog_JMBG");
+            var jmbg = Chrome.Element("Nalog_JMBG");
+            if (jmbg != null)
             {
-                Chrome.Cekaj("Nalog_JMBG");
-                Chrome.PopuniElement(promena.Jmbg, "JmbgIliRedniBroj");
-                Chrome.Element("button_search", Selector.Class).Click();
+                if (podvrsta)
+                {
+                    Chrome.ElementSelect("Nalog_PodVrstaPromeneID").SelectByValue("1"); // podvrsta promene "izmena"
+                }
+                Chrome.PopuniElement(Converter.LatToCyr(promena.MestoLk), "Nalog_PrebivalisteNaselje");
+                Chrome.PopuniElement(Converter.LatToCyr(promena.UlicaLk), "Nalog_PrebivalisteUlica");
+                if (promena.BrojLk.Equals("BB") || promena.BrojLk.Equals("ББ"))
+                {
+                    promena.BrojLk = "0";
+                }
+                Chrome.PopuniElement((promena.BrojLk.Equals("0")) ? "0" : promena.BrojLk.TrimStart('0'), "Nalog_PrebivalisteKucniBrojBrojcaniDeo");
+                Chrome.PopuniElement(Converter.LatToCyr(promena.DodatakBrojuLk), "Nalog_PrebivalisteKucniBrojZnakovniDeo");
+                Chrome.PopuniElement("", "Nalog_PrebivalisteUlaz");
+                Chrome.PopuniElement("", "Nalog_PrebivalisteSprat");
+                Chrome.PopuniElement("", "Nalog_PrebivalisteStan");
             }
-            UpisiAdresu(promena, true);
         }
 
-        public static void UpisiAdresu(Mup promena, bool podvrsta = false)
+        public static void UpisiLicnePodatke(Mup promena, bool podvrsta = false, bool upisiJmbg = false)
         {
             Chrome.Cekaj("Nalog_JMBG");
 
@@ -81,24 +92,42 @@ namespace BirackiSpisakDataManager.Web
 
             if (jmbg != null)
             {
+                var muski = Chrome.Element("Nalog.Pol_True");
+                var zenski = Chrome.Element("Nalog.Pol_False");
+
+                string datumRodjenja = promena.DatumRodjenja.Value.ToShortDateString();
+                string d = datumRodjenja.Substring(0, 2);
+                string m = datumRodjenja.Substring(3, 2);
+                string g = datumRodjenja.Substring(6, 4);
+
+                bool pol = promena.Pol.Equals("M") ? true : false;
+
+                string mr = (String.IsNullOrEmpty(promena.MestoRodjenja))
+                            ? $"{Converter.LatToCyr(promena.DrzavaRodjenja)}, {Converter.LatToCyr(promena.StranoMestoRodjenja)}"
+                            : Converter.LatToCyr(promena.MestoRodjenja);
                 if (podvrsta)
                 {
                     Chrome.ElementSelect("Nalog_PodVrstaPromeneID").SelectByValue("1"); // podvrsta promene "izmena"
                 }
-
-                Chrome.PopuniElement(Converter.LatToCyr(promena.MestoLk), "Nalog_PrebivalisteNaselje");
-                Chrome.PopuniElement(Converter.LatToCyr(promena.UlicaLk), "Nalog_PrebivalisteUlica");
-
-                if (promena.BrojLk.Equals("BB") || promena.BrojLk.Equals("ББ"))
+                if (upisiJmbg)
                 {
-                    promena.BrojLk = "0";
+                    Chrome.PopuniElement(promena.Jmbg, "Nalog_JMBG");
                 }
-
-                Chrome.PopuniElement((promena.BrojLk.Equals("0")) ? "0" : promena.BrojLk.TrimStart('0'), "Nalog_PrebivalisteKucniBrojBrojcaniDeo");
-                Chrome.PopuniElement(Converter.LatToCyr(promena.DodatakBrojuLk), "Nalog_PrebivalisteKucniBrojZnakovniDeo");
-                Chrome.PopuniElement("", "Nalog_PrebivalisteUlaz");
-                Chrome.PopuniElement("", "Nalog_PrebivalisteSprat");
-                Chrome.PopuniElement("", "Nalog_PrebivalisteStan");
+                Chrome.PopuniElement(Converter.LatToCyr(promena.Prezime), "Nalog_Prezime");
+                Chrome.PopuniElement(Converter.LatToCyr(promena.Ime), "Nalog_Ime");
+                Chrome.PopuniElement(Converter.LatToCyr(promena.ImeRoditelja), "Nalog_ImeRoditelja");
+                Chrome.PopuniElement(d, "Nalog_DatumRodjenja_Day");
+                Chrome.PopuniElement(m, "Nalog_DatumRodjenja_Month");
+                Chrome.PopuniElement(g, "Nalog_DatumRodjenja_Year");
+                Chrome.PopuniElement(mr, "Nalog_MestoRodjenja");
+                if (pol)
+                {
+                    muski.Click();
+                }
+                else
+                {
+                    zenski.Click();
+                }
             }
         }
 
@@ -124,9 +153,8 @@ namespace BirackiSpisakDataManager.Web
             Chrome.PopuniElement(g, "Resenje_ObrazlozenjeDatumAktaMUP_Year");
         }
 
-        public static void UpisiPrebivaliste(Mup promena)
+        private static void PopuniJmbg(Mup promena)
         {
-            Chrome.Idi("https://www.birackispisak.gov.rs/Nalog/UnosNalogaPretragaBiraca/2");
             var el = Chrome.Element("validation-summary-errors", Selector.Class);
             if (el == null)
             {
@@ -134,7 +162,51 @@ namespace BirackiSpisakDataManager.Web
                 Chrome.PopuniElement(promena.Jmbg, "JmbgIliRedniBroj");
                 Chrome.Element("button_search", Selector.Class).Click();
             }
+        }
+
+        public static void UpisiPrebivaliste(Mup promena)
+        {
+            Chrome.Idi("https://www.birackispisak.gov.rs/Nalog/UnosNalogaPretragaBiraca/2");
+            PopuniJmbg(promena);
+            var prezime = Chrome.Element("Nalog_Prezime");
+            if (prezime.GetAttribute("value").Trim().Equals(""))
+            {
+                UpisiLicnePodatke(promena);
+            }
             UpisiAdresu(promena);
+        }
+
+        public static void PromeniPrebivaliste(Mup promena)
+        {
+            Chrome.Idi("https://www.birackispisak.gov.rs/Nalog/UnosNalogaPretragaBiraca/7");
+            PopuniJmbg(promena);
+            UpisiAdresu(promena, true);
+        }
+
+        public static void UpisiPunoletnoLice(Mup promena)
+        {
+            Chrome.Idi("https://www.birackispisak.gov.rs/Nalog/UnosNaloga/1");
+            UpisiLicnePodatke(promena, false, true);
+            UpisiAdresu(promena, true);
+        }
+
+        public static void PromeniLicnePodatke(Mup promena)
+        {
+            Chrome.Idi("https://www.birackispisak.gov.rs/Nalog/UnosNalogaPretragaBiraca/6");
+            PopuniJmbg(promena);
+            UpisiLicnePodatke(promena, true);
+        }
+
+        public static void OdjaviPrebivaliste(Mup promena)
+        {
+            Chrome.Idi("https://www.birackispisak.gov.rs/Nalog/UnosNalogaPretragaBiraca/13");
+            PopuniJmbg(promena);
+        }
+
+        public static void OdjaviPrebivalisteSluzbeno(Mup promena)
+        {
+            Chrome.Idi("https://www.birackispisak.gov.rs/Nalog/UnosNalogaPretragaBiraca/32");
+            PopuniJmbg(promena);
         }
     }
 }

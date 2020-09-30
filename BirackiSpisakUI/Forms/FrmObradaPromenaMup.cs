@@ -258,14 +258,13 @@ namespace BirackiSpisakUI.Forms
             JbsMup.Zahtevi(txtJmbg.Text);
         }
 
-        private void btnPromenaPrebivalista_Click(object sender, EventArgs e)
-        {
-            JbsMup.PromeniPrebivaliste(_promena);
-        }
-
         private void btnAdresa_Click(object sender, EventArgs e)
         {
             JbsMup.UpisiAdresu(_promena);
+        }
+        private void btnLicniPodaci_Click(object sender, EventArgs e)
+        {
+            JbsMup.UpisiLicnePodatke(_promena, true, true);
         }
 
         private void btnResenje_Click(object sender, EventArgs e)
@@ -274,9 +273,39 @@ namespace BirackiSpisakUI.Forms
             JbsMup.PopuniResenje(_promena);
         }
 
+        private void btnPromenaPrebivalista_Click(object sender, EventArgs e)
+        {
+            JbsMup.PromeniPrebivaliste(_promena);
+        }
+
         private void btnUpisPrebivalista_Click(object sender, EventArgs e)
         {
             JbsMup.UpisiPrebivaliste(_promena);
+        }
+
+        private void btnPunoletni_Click(object sender, EventArgs e)
+        {
+            JbsMup.UpisiPunoletnoLice(_promena);
+        }
+
+        private void btnPromenaLicnihPodataka_Click(object sender, EventArgs e)
+        {
+            JbsMup.PromeniLicnePodatke(_promena);
+        }
+
+        private void btnUmrli_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Моша :-P");
+        }
+
+        private void btnOdjavaPrebivalista_Click(object sender, EventArgs e)
+        {
+            JbsMup.OdjaviPrebivaliste(_promena);
+        }
+
+        private void btnOdjavaPrebivalistaSluzbeno_Click(object sender, EventArgs e)
+        {
+            JbsMup.OdjaviPrebivalisteSluzbeno(_promena);
         }
     }
 }
