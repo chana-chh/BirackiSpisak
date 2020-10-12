@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmKontrolnaTabla));
             this.btnIzlaz = new System.Windows.Forms.Button();
             this.lblNaslov = new System.Windows.Forms.Label();
             this.btnUvozPromena = new System.Windows.Forms.Button();
@@ -36,6 +37,8 @@
             this.btnMupPromene = new System.Windows.Forms.Button();
             this.btnMkuPromene = new System.Windows.Forms.Button();
             this.btnMkvPromene = new System.Windows.Forms.Button();
+            this.btnPrijava = new System.Windows.Forms.Button();
+            this.btnChrome = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btnIzlaz
@@ -90,6 +93,7 @@
             // 
             // btnUnosPromena
             // 
+            this.btnUnosPromena.Enabled = false;
             this.btnUnosPromena.FlatAppearance.MouseOverBackColor = System.Drawing.Color.AliceBlue;
             this.btnUnosPromena.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnUnosPromena.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
@@ -130,6 +134,7 @@
             this.btnMkuPromene.Text = "МКУ промене";
             this.btnMkuPromene.UseVisualStyleBackColor = false;
             this.btnMkuPromene.Visible = false;
+            this.btnMkuPromene.Click += new System.EventHandler(this.btnMkuPromene_Click);
             // 
             // btnMkvPromene
             // 
@@ -145,12 +150,41 @@
             this.btnMkvPromene.UseVisualStyleBackColor = false;
             this.btnMkvPromene.Visible = false;
             // 
+            // btnPrijava
+            // 
+            this.btnPrijava.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnPrijava.BackgroundImage")));
+            this.btnPrijava.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.btnPrijava.Enabled = false;
+            this.btnPrijava.FlatAppearance.MouseOverBackColor = System.Drawing.Color.AliceBlue;
+            this.btnPrijava.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnPrijava.Location = new System.Drawing.Point(12, 329);
+            this.btnPrijava.Name = "btnPrijava";
+            this.btnPrijava.Size = new System.Drawing.Size(30, 30);
+            this.btnPrijava.TabIndex = 5;
+            this.btnPrijava.UseVisualStyleBackColor = true;
+            this.btnPrijava.Click += new System.EventHandler(this.btnPrijava_Click);
+            // 
+            // btnChrome
+            // 
+            this.btnChrome.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnChrome.BackgroundImage")));
+            this.btnChrome.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.btnChrome.FlatAppearance.MouseOverBackColor = System.Drawing.Color.AliceBlue;
+            this.btnChrome.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnChrome.Location = new System.Drawing.Point(48, 329);
+            this.btnChrome.Name = "btnChrome";
+            this.btnChrome.Size = new System.Drawing.Size(30, 30);
+            this.btnChrome.TabIndex = 5;
+            this.btnChrome.UseVisualStyleBackColor = true;
+            this.btnChrome.Click += new System.EventHandler(this.btnChrome_Click);
+            // 
             // FrmKontrolnaTabla
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(150, 405);
             this.ControlBox = false;
+            this.Controls.Add(this.btnChrome);
+            this.Controls.Add(this.btnPrijava);
             this.Controls.Add(this.btnMkvPromene);
             this.Controls.Add(this.btnMkuPromene);
             this.Controls.Add(this.btnMupPromene);
@@ -167,6 +201,7 @@
             this.Text = "FrmKontrolnaTabla";
             this.TopMost = true;
             this.Activated += new System.EventHandler(this.FrmKontrolnaTabla_Activated);
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.FrmKontrolnaTabla_FormClosed);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -182,5 +217,7 @@
         private System.Windows.Forms.Button btnMupPromene;
         private System.Windows.Forms.Button btnMkuPromene;
         private System.Windows.Forms.Button btnMkvPromene;
+        private System.Windows.Forms.Button btnPrijava;
+        private System.Windows.Forms.Button btnChrome;
     }
 }

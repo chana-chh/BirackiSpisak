@@ -35,8 +35,8 @@ namespace BirackiSpisakDataManager.Web
             Chrome.Cekaj("CaseNumber");
             Chrome.PopuniElement(ConfigurationManager.AppSettings["ZupBrojZaMKR"] + DateTime.Now.Year, "CaseNumber");
             Chrome.PopuniElement(DateTime.Now.ToShortDateString(), "CaseDate");
-            Chrome.PopuniElement(promena.ImeLk, "OnBelhalfOfFirstName");
-            Chrome.PopuniElement(promena.PrezimeLk, "OnBelhalfOfLastName");
+            Chrome.PopuniElement(Converter.LatToCyr(promena.ImeLk), "OnBelhalfOfFirstName");
+            Chrome.PopuniElement(Converter.LatToCyr(promena.PrezimeLk), "OnBelhalfOfLastName");
             Chrome.Element("consent").Click();
             Chrome.Element("#div_AdministrativeProcedureCode > div > a.btn-info", Selector.Css).Click();
             Chrome.Cekaj("upmkrJMBG1");
@@ -56,9 +56,9 @@ namespace BirackiSpisakDataManager.Web
             Chrome.PopuniElement(promena.PrezimeLk, "OnBelhalfOfLastName");
             Chrome.Element("consent").Click();
             Chrome.Element("#div_AdministrativeProcedureCode > div > a.btn-info", Selector.Css).Click();
-            Chrome.Cekaj("upmkuJMBG1");
-            Chrome.PopuniElement(promena.Jmbg, "upmkuJMBG1");
-            Chrome.Element("upmkuButton1").Click();
+            Chrome.Cekaj("upmkuJMBG");
+            Chrome.PopuniElement(promena.Jmbg, "upmkuJMBG");
+            Chrome.Element("upmkuButton").Click();
         }
 
         public static void Mkv(Mup promena)
@@ -73,9 +73,28 @@ namespace BirackiSpisakDataManager.Web
             Chrome.PopuniElement(promena.PrezimeLk, "OnBelhalfOfLastName");
             Chrome.Element("consent").Click();
             Chrome.Element("#div_AdministrativeProcedureCode > div > a.btn-info", Selector.Css).Click();
-            Chrome.Cekaj("upmkvJMBG1");
-            Chrome.PopuniElement(promena.Jmbg, "upmkvJMBG1");
-            Chrome.Element("upmkvButton1").Click();
+            Chrome.Cekaj("upmkvJMBG");
+            Chrome.PopuniElement(promena.Jmbg, "upmkvJMBG");
+            Chrome.Element("upmkvButton").Click();
+        }
+
+        public static bool UpisiMkrZaPunoletne(Mup promena)
+        {
+            Chrome.EzupTab();
+            var jmbg = Chrome.Element("upmkrJMBG1").GetAttribute("value");
+            if (jmbg.Equals(promena.Jmbg))
+            {
+                var opstina = Chrome.Element("upmkrMunicipality").GetAttribute("value").ToUpper();
+                var maticnoPodrucje = Chrome.Element("upmkrParentArea").GetAttribute("value").ToUpper();
+                var tekuciBroj = Chrome.Element("upmkrCurrentNumber").GetAttribute("value");
+                var godinaUpisa = Chrome.Element("upmkrEnrollmentYear").GetAttribute("value");
+                Chrome.JbsTab();
+                Chrome.PopuniElement(opstina, "Resenje_ObrazlozenjeGradOpstina");
+                Chrome.PopuniElement(maticnoPodrucje, "Resenje_ObrazlozenjeMaticnoPodrucje");
+                Chrome.PopuniElement(tekuciBroj, "Resenje_ObrazlozenjeTekuciBroj");
+                Chrome.PopuniElement(godinaUpisa, "Resenje_ObrazlozenjeGodina");
+            }
+            return false;
         }
     }
 }

@@ -1,4 +1,5 @@
 ﻿using BirackiSpisakDataManager.Models;
+using BirackiSpisakDataManager.Web;
 using BirackiSpisakUI.Forms;
 using System;
 using System.Drawing;
@@ -70,6 +71,41 @@ namespace BirackiSpisakUI
             btnMupPromene.BackColor = Color.MintCream;
             btnMkuPromene.BackColor = Color.MintCream;
             btnMkvPromene.BackColor = Color.MintCream;
+        }
+
+        private void btnMkuPromene_Click(object sender, EventArgs e)
+        {
+            btnMkuPromene.BackColor = Color.OrangeRed;
+            FrmObradaPromenaMku forma = new FrmObradaPromenaMku(korisnik);
+            forma.ShowDialog();
+        }
+
+        private void btnPrijava_Click(object sender, EventArgs e)
+        {
+            if (JbsWeb.PripremiChrome())
+            {
+                btnChrome.Enabled = false;
+                btnPrijava.Enabled = false;
+                btnUnosPromena.Enabled = true;
+            }
+            else
+            {
+                MessageBox.Show("Морају бити отворени само еЗуп и ЈБС.",
+                    "Покретање претраживача",
+                    MessageBoxButtons.OK,
+                    MessageBoxIcon.Asterisk);
+            }
+        }
+
+        private void btnChrome_Click(object sender, EventArgs e)
+        {
+            JbsWeb.OtvoriChrome();
+            btnPrijava.Enabled = true;
+        }
+
+        private void FrmKontrolnaTabla_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            JbsWeb.ZatvoriChrome();
         }
     }
 }

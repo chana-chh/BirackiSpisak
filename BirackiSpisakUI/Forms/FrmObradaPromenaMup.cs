@@ -21,6 +21,7 @@ namespace BirackiSpisakUI.Forms
         private List<Mup> _lista = new List<Mup>();
         private Mup _promena = new Mup();
         private int _indeks = 0;
+        private bool _sl = false;
 
         public FrmObradaPromenaMup(Korisnik korisnik)
         {
@@ -80,7 +81,7 @@ namespace BirackiSpisakUI.Forms
                 txtDatumFajla.Text = "";
                 txtDatumPromene.Text = "";
                 txtVrstaPromene.Text = "";
-                lblBrojPromena.Text = $"0 од {_lista.Count}";
+                lblBrojPromena.Text = $"0 од 0";
                 _promena = null;
             }
         }
@@ -220,92 +221,81 @@ namespace BirackiSpisakUI.Forms
             PrikaziPromenu(_indeks);
         }
 
-        private void btnChrome_Click(object sender, EventArgs e)
-        {
-            JbsMupWeb.OtvoriChrome();
-            btnPrijava.Enabled = true;
-        }
-
-        private void btnPrijava_Click(object sender, EventArgs e)
-        {
-            if (JbsMupWeb.PripremiChrome())
-            {
-                btnChrome.Enabled = false;
-                pnlDugmici.Enabled = true;
-                btnPrijava.Enabled = false;
-            }
-            else
-            {
-                MessageBox.Show("Морају бити отворени само еЗуп и ЈБС.",
-                    "Покретање претраживача",
-                    MessageBoxButtons.OK,
-                    MessageBoxIcon.Asterisk);
-            }
-        }
-
         private void FrmObradaPromenaMup_FormClosed(object sender, FormClosedEventArgs e)
         {
-            JbsMupWeb.ZatvoriChrome();
+            JbsWeb.ZatvoriChrome();
         }
 
         private void btnJmbg_Click(object sender, EventArgs e)
         {
-            JbsMupWeb.Jmbg(txtJmbg.Text);
+            JbsWeb.Jmbg(txtJmbg.Text);
         }
 
         private void btnZahtevi_Click(object sender, EventArgs e)
         {
-            JbsMupWeb.Zahtevi(txtJmbg.Text);
+            JbsWeb.Zahtevi(txtJmbg.Text);
         }
 
         private void btnAdresa_Click(object sender, EventArgs e)
         {
-            JbsMupWeb.UpisiAdresu(_promena);
+            JbsWeb.UpisiAdresu(_promena);
         }
         private void btnLicniPodaci_Click(object sender, EventArgs e)
         {
-            JbsMupWeb.UpisiLicnePodatke(_promena, true, true);
+            JbsWeb.UpisiLicnePodatke(_promena, true, true);
         }
 
         private void btnResenje_Click(object sender, EventArgs e)
         {
-            JbsMupWeb.PopuniOvlascenje();
-            JbsMupWeb.PopuniResenje(_promena);
+            JbsWeb.PopuniOvlascenje();
+            if (_sl)
+            {
+                JbsWeb.PopuniResenje(_promena, true);
+            }
+            else
+            {
+                JbsWeb.PopuniResenje(_promena);
+            }
+            _sl = false;
         }
 
         private void btnPromenaPrebivalista_Click(object sender, EventArgs e)
         {
-            JbsMupWeb.PromeniPrebivaliste(_promena);
+            JbsWeb.PromeniPrebivaliste(_promena);
         }
 
         private void btnUpisPrebivalista_Click(object sender, EventArgs e)
         {
-            JbsMupWeb.UpisiPrebivaliste(_promena);
+            JbsWeb.UpisiPrebivaliste(_promena);
         }
 
         private void btnPunoletni_Click(object sender, EventArgs e)
         {
-            JbsMupWeb.UpisiPunoletnoLice(_promena);
+            JbsWeb.UpisiPunoletnoLice(_promena);
+        }
+
+        private void btnPumoletniMkr_Click(object sender, EventArgs e)
+        {
+            if (!ZupWeb.UpisiMkrZaPunoletne(_promena))
+            {
+                MessageBox.Show("У еЗуп-у није отворена МКР за ово лице", "Подаци из МКР");
+            }
         }
 
         private void btnPromenaLicnihPodataka_Click(object sender, EventArgs e)
         {
-            JbsMupWeb.PromeniLicnePodatke(_promena);
-        }
-
-        private void btnUmrli_Click(object sender, EventArgs e)
-        {
-            MessageBox.Show("Моша :-P");
+            JbsWeb.PromeniLicnePodatke(_promena);
         }
 
         private void btnOdjavaPrebivalista_Click(object sender, EventArgs e)
         {
-            JbsMupWeb.OdjaviPrebivaliste(_promena);
+            JbsWeb.OdjaviPrebivaliste(_promena);
         }
 
         private void btnOdjavaPrebivalistaSluzbeno_Click(object sender, EventArgs e)
         {
-            JbsMupWeb.OdjaviPrebivalisteSluzbeno(_promena);
+            _sl = true;
+            JbsWeb.OdjaviPrebivalisteSluzbeno(_promena);
         }
 
         private void btnTrenutnoPrebivaliste_Click(object sender, EventArgs e)

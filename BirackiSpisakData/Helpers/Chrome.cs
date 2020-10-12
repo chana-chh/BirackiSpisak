@@ -23,6 +23,10 @@ namespace BirackiSpisakDataManager.Helpers
             _driver.Navigate().GoToUrl(url);
         }
 
+        public static IWebDriver Drajver() {
+            return _driver;
+        }
+
         private static void Init()
         {
             _driver = _driver = new ChromeDriver();

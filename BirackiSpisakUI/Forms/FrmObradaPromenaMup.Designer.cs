@@ -70,8 +70,6 @@
             this.btnSledeci = new System.Windows.Forms.Button();
             this.btnDokaz = new System.Windows.Forms.Button();
             this.btnReseno = new System.Windows.Forms.Button();
-            this.btnPrijava = new System.Windows.Forms.Button();
-            this.btnChrome = new System.Windows.Forms.Button();
             this.pnlDugmici = new System.Windows.Forms.Panel();
             this.btnLicniPodaci = new System.Windows.Forms.Button();
             this.btnAdresa = new System.Windows.Forms.Button();
@@ -80,7 +78,7 @@
             this.btnOdjavaPrebivalista = new System.Windows.Forms.Button();
             this.btnPromenaLicnihPodataka = new System.Windows.Forms.Button();
             this.btnPromenaPrebivalista = new System.Windows.Forms.Button();
-            this.btnUmrli = new System.Windows.Forms.Button();
+            this.btnPunoletniMkr = new System.Windows.Forms.Button();
             this.btnPunoletni = new System.Windows.Forms.Button();
             this.btnResenje = new System.Windows.Forms.Button();
             this.btnTrenutnoPrebivaliste = new System.Windows.Forms.Button();
@@ -568,33 +566,6 @@
             this.btnReseno.UseVisualStyleBackColor = true;
             this.btnReseno.Click += new System.EventHandler(this.btnReseno_Click);
             // 
-            // btnPrijava
-            // 
-            this.btnPrijava.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnPrijava.BackgroundImage")));
-            this.btnPrijava.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.btnPrijava.Enabled = false;
-            this.btnPrijava.FlatAppearance.MouseOverBackColor = System.Drawing.Color.AliceBlue;
-            this.btnPrijava.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnPrijava.Location = new System.Drawing.Point(232, 553);
-            this.btnPrijava.Name = "btnPrijava";
-            this.btnPrijava.Size = new System.Drawing.Size(30, 30);
-            this.btnPrijava.TabIndex = 5;
-            this.btnPrijava.UseVisualStyleBackColor = true;
-            this.btnPrijava.Click += new System.EventHandler(this.btnPrijava_Click);
-            // 
-            // btnChrome
-            // 
-            this.btnChrome.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnChrome.BackgroundImage")));
-            this.btnChrome.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.btnChrome.FlatAppearance.MouseOverBackColor = System.Drawing.Color.AliceBlue;
-            this.btnChrome.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnChrome.Location = new System.Drawing.Point(268, 553);
-            this.btnChrome.Name = "btnChrome";
-            this.btnChrome.Size = new System.Drawing.Size(30, 30);
-            this.btnChrome.TabIndex = 5;
-            this.btnChrome.UseVisualStyleBackColor = true;
-            this.btnChrome.Click += new System.EventHandler(this.btnChrome_Click);
-            // 
             // pnlDugmici
             // 
             this.pnlDugmici.Controls.Add(this.btnLicniPodaci);
@@ -604,7 +575,7 @@
             this.pnlDugmici.Controls.Add(this.btnOdjavaPrebivalista);
             this.pnlDugmici.Controls.Add(this.btnPromenaLicnihPodataka);
             this.pnlDugmici.Controls.Add(this.btnPromenaPrebivalista);
-            this.pnlDugmici.Controls.Add(this.btnUmrli);
+            this.pnlDugmici.Controls.Add(this.btnPunoletniMkr);
             this.pnlDugmici.Controls.Add(this.btnPunoletni);
             this.pnlDugmici.Controls.Add(this.btnResenje);
             this.pnlDugmici.Controls.Add(this.btnTrenutnoPrebivaliste);
@@ -613,7 +584,6 @@
             this.pnlDugmici.Controls.Add(this.btnMkv);
             this.pnlDugmici.Controls.Add(this.btnZahtevi);
             this.pnlDugmici.Controls.Add(this.btnJmbg);
-            this.pnlDugmici.Enabled = false;
             this.pnlDugmici.Location = new System.Drawing.Point(12, 385);
             this.pnlDugmici.Name = "pnlDugmici";
             this.pnlDugmici.Size = new System.Drawing.Size(614, 120);
@@ -717,19 +687,19 @@
             this.btnPromenaPrebivalista.UseVisualStyleBackColor = false;
             this.btnPromenaPrebivalista.Click += new System.EventHandler(this.btnPromenaPrebivalista_Click);
             // 
-            // btnUmrli
+            // btnPunoletniMkr
             // 
-            this.btnUmrli.BackColor = System.Drawing.Color.PaleGreen;
-            this.btnUmrli.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Gainsboro;
-            this.btnUmrli.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnUmrli.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.btnUmrli.Location = new System.Drawing.Point(505, 0);
-            this.btnUmrli.Name = "btnUmrli";
-            this.btnUmrli.Size = new System.Drawing.Size(100, 30);
-            this.btnUmrli.TabIndex = 0;
-            this.btnUmrli.Text = "Пун МКР";
-            this.btnUmrli.UseVisualStyleBackColor = false;
-            this.btnUmrli.Click += new System.EventHandler(this.btnUmrli_Click);
+            this.btnPunoletniMkr.BackColor = System.Drawing.Color.Lavender;
+            this.btnPunoletniMkr.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Gainsboro;
+            this.btnPunoletniMkr.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnPunoletniMkr.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.btnPunoletniMkr.Location = new System.Drawing.Point(505, 0);
+            this.btnPunoletniMkr.Name = "btnPunoletniMkr";
+            this.btnPunoletniMkr.Size = new System.Drawing.Size(100, 30);
+            this.btnPunoletniMkr.TabIndex = 0;
+            this.btnPunoletniMkr.Text = "Пун МКР";
+            this.btnPunoletniMkr.UseVisualStyleBackColor = false;
+            this.btnPunoletniMkr.Click += new System.EventHandler(this.btnPumoletniMkr_Click);
             // 
             // btnPunoletni
             // 
@@ -850,8 +820,6 @@
             this.ClientSize = new System.Drawing.Size(645, 590);
             this.ControlBox = false;
             this.Controls.Add(this.pnlDugmici);
-            this.Controls.Add(this.btnChrome);
-            this.Controls.Add(this.btnPrijava);
             this.Controls.Add(this.btnReseno);
             this.Controls.Add(this.btnDokaz);
             this.Controls.Add(this.btnSledeci);
@@ -954,24 +922,22 @@
         private System.Windows.Forms.Button btnSledeci;
         private System.Windows.Forms.Button btnDokaz;
         private System.Windows.Forms.Button btnReseno;
-        private System.Windows.Forms.Button btnPrijava;
-        private System.Windows.Forms.Button btnChrome;
         private System.Windows.Forms.Panel pnlDugmici;
         private System.Windows.Forms.Button btnMkv;
         private System.Windows.Forms.Button btnZahtevi;
         private System.Windows.Forms.Button btnJmbg;
-        private System.Windows.Forms.Button btnLicniPodaci;
-        private System.Windows.Forms.Button btnAdresa;
-        private System.Windows.Forms.Button btnPromenaPrebivalista;
-        private System.Windows.Forms.Button btnUpisPrebivalista;
-        private System.Windows.Forms.Button btnOdjavaPrebivalistaSluzbeno;
-        private System.Windows.Forms.Button btnOdjavaPrebivalista;
-        private System.Windows.Forms.Button btnPromenaLicnihPodataka;
-        private System.Windows.Forms.Button btnUmrli;
         private System.Windows.Forms.Button btnPunoletni;
         private System.Windows.Forms.Button btnResenje;
         private System.Windows.Forms.Button btnTrenutnoPrebivaliste;
         private System.Windows.Forms.Button btnMku;
         private System.Windows.Forms.Button btnMkr;
+        private System.Windows.Forms.Button btnLicniPodaci;
+        private System.Windows.Forms.Button btnAdresa;
+        private System.Windows.Forms.Button btnUpisPrebivalista;
+        private System.Windows.Forms.Button btnOdjavaPrebivalistaSluzbeno;
+        private System.Windows.Forms.Button btnOdjavaPrebivalista;
+        private System.Windows.Forms.Button btnPromenaLicnihPodataka;
+        private System.Windows.Forms.Button btnPromenaPrebivalista;
+        private System.Windows.Forms.Button btnPunoletniMkr;
     }
 }

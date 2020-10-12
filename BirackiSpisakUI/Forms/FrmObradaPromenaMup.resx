@@ -179,40 +179,6 @@
         yOu1L70P4HkPXOZ/TT6jmQIAAAAASUVORK5CYII=
 </value>
   </data>
-  <metadata name="btnPrijava.Locked" type="System.Boolean, System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e">
-    <value>True</value>
-  </metadata>
-  <data name="btnPrijava.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing.Common" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAA
-        pQAAAKUBcMTeVQAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAADsSURBVEhLxZbN
-        CcJQEIQDNmEF1uAhFViDRViFRViBreTi2YOgBXjxLBjnxTewLEP2Jfpw4DtkZ3YX8t/0fT8K1IIOpIMp
-        pJ5WDrXkoG8upZNDLQz7egT7pGlh0Ncj2CdNC4O+HsE+aVqgW0J5YwzDSxZYoDPYKM8zDJ+x4AGeYKt8
-        CzRrwRrcwQvsVIZA0xckoBW45gF7lUlkX5sR0BKc8pADWIjMZwGU7hIezOX4vwXeKAEqP0XeiIDqXWSo
-        7m0KVX/QLuC3rwqo7suOQV+PYJ80LQz6egT7pGlh0Ncj2CdNC1T9o//Fb0vTvgGdcicgLVJrLAAAAABJ
-        RU5ErkJggg==
-</value>
-  </data>
-  <metadata name="btnChrome.Locked" type="System.Boolean, System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e">
-    <value>True</value>
-  </metadata>
-  <data name="btnChrome.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing.Common" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAA
-        qAAAAKgBefSzxgAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAAJcSURBVEhLnZa5
-        axVBHMdXGwvPKAriWSQi2FvY+A+oYArxamxsYtSoiL1g5dFrCrtACjVFIigWgp2F2HlgZxSNTaIEknh9
-        PsPOc3fe7Mt7fuHz2JmdmZ35XfOKZbQTzsFjeAs/St6Ufb5zTM/aDqPwExbgCdyCS3AZbsNTWIQluAfO
-        6UpHYA5m4CKsgyathxFwrHMOQ0cNwy94AJ0WTuWHHoJzXSMrd+6Am7DCjh61EjSja7SdRPt5xNfwP4tH
-        OXcMXGubHVE6VGf+hgN2ZLQXTsLZZbgKBoeODzLM7LgAr+AleNyoAXgOf3rE6NoBwSnzsAYOgi/PgHLA
-        R5iG49BXcgI+wVfoh1Q63RA2T4qpkqhx+AxrwZ27+GZItQX8yLPQapf9kz68gxs+lNoNnsiw8zTuvEn6
-        xDF7QqsuI8rsL76DCVXVdYi21CRN2gSOORZadV0Boyn82KhqNWh7J2+0o0HxA4OhVVfrAx7D5Ep1Gpys
-        Q5t0CgztnKOtV8FEOtjClcqkeQE6Uoem6trJhpJJZmil0uGGogvpUM0l7tw+y8J+SLUBDNMhGyaaSWFV
-        zGkXWK41V8p9yMmS3ko0ZVpbcnOniNLOOvMoTIAO3Aqp3P03uBtapWKxewTVMpHTPnB310KrLuf68Vmo
-        FTtlidWmer9TRdVcH2BVaP2Ti98B1zhkR07xwrFc5BLMO0Pba6aqNIund27jhRPlSTTXFzgPTlbu+D1U
-        w9J3Boc21yyNO0+l/XS8trYuuai2dffeHZqieunr0DabdyPDzFg2Gf2rUv3bYp/vWqHYrqL4C1ZOqUaV
-        TEZdAAAAAElFTkSuQmCC
-</value>
-  </data>
   <metadata name="pnlDugmici.Locked" type="System.Boolean, System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e">
     <value>True</value>
   </metadata>
@@ -237,7 +203,7 @@
   <metadata name="btnPromenaPrebivalista.Locked" type="System.Boolean, System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e">
     <value>True</value>
   </metadata>
-  <metadata name="btnUmrli.Locked" type="System.Boolean, System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e">
+  <metadata name="btnPunoletniMkr.Locked" type="System.Boolean, System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e">
     <value>True</value>
   </metadata>
   <metadata name="btnPunoletni.Locked" type="System.Boolean, System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e">
@@ -285,7 +251,7 @@
   <metadata name="btnPromenaPrebivalista.Locked" type="System.Boolean, System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e">
     <value>True</value>
   </metadata>
-  <metadata name="btnUmrli.Locked" type="System.Boolean, System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e">
+  <metadata name="btnPunoletniMkr.Locked" type="System.Boolean, System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e">
     <value>True</value>
   </metadata>
   <metadata name="btnPunoletni.Locked" type="System.Boolean, System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e">

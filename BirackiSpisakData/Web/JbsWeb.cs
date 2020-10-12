@@ -1,15 +1,13 @@
 ﻿using BirackiSpisakDataManager.Helpers;
 using BirackiSpisakDataManager.Models;
-using OpenQA.Selenium.Support.UI;
+using OpenQA.Selenium.Interactions;
 using System;
-using System.Collections.Generic;
 using System.Configuration;
-using System.Text;
 using static BirackiSpisakData.Enums;
 
 namespace BirackiSpisakDataManager.Web
 {
-    public static class JbsMupWeb
+    public static class JbsWeb
     {
         public static void OtvoriChrome()
         {
@@ -127,18 +125,27 @@ namespace BirackiSpisakDataManager.Web
             Chrome.PopuniElement(ConfigurationManager.AppSettings["GodinaOvlascenja"], "Resenje_OvlascenjeDatum_Year");
         }
 
-        public static void PopuniResenje(Mup promena)
+        public static void PopuniResenje(Mup promena, bool sluzbeno = false)
         {
             Chrome.JbsTab();
             string datum = promena.DatumFajla.Value.ToShortDateString();
             string d = datum.Substring(0, 2);
             string m = datum.Substring(3, 2);
             string g = datum.Substring(6, 4);
-            Chrome.PopuniElement("МУП СРБИЈЕ", "Resenje_ObrazlozenjeMUP");
-            Chrome.PopuniElement("/", "Resenje_ObrazlozenjeBrojAktaMUP");
-            Chrome.PopuniElement(d, "Resenje_ObrazlozenjeDatumAktaMUP_Day");
-            Chrome.PopuniElement(m, "Resenje_ObrazlozenjeDatumAktaMUP_Month");
-            Chrome.PopuniElement(g, "Resenje_ObrazlozenjeDatumAktaMUP_Year");
+            if (!sluzbeno)
+            {
+                Chrome.PopuniElement("МУП СРБИЈЕ", "Resenje_ObrazlozenjeMUP");
+                Chrome.PopuniElement("/", "Resenje_ObrazlozenjeBrojAktaMUP");
+                Chrome.PopuniElement(d, "Resenje_ObrazlozenjeDatumAktaMUP_Day");
+                Chrome.PopuniElement(m, "Resenje_ObrazlozenjeDatumAktaMUP_Month");
+                Chrome.PopuniElement(g, "Resenje_ObrazlozenjeDatumAktaMUP_Year");
+            }
+            else
+            {
+                Chrome.PopuniElement(d, "Resenje_DatumIzvestajaMUP_Day");
+                Chrome.PopuniElement(m, "Resenje_DatumIzvestajaMUP_Month");
+                Chrome.PopuniElement(g, "Resenje_DatumIzvestajaMUP_Year");
+            }
         }
 
         private static void PopuniJmbg(Mup promena)
@@ -177,9 +184,19 @@ namespace BirackiSpisakDataManager.Web
         public static void UpisiPunoletnoLice(Mup promena)
         {
             Chrome.JbsTab();
-            Chrome.Idi("https://www.birackispisak.gov.rs/Nalog/UnosNaloga/1");
-            UpisiLicnePodatke(promena, false, true);
-            UpisiAdresu(promena, true);
+            Chrome.Idi("https://www.birackispisak.gov.rs/Nalog/ListaNaloga/-1");
+            /*
+                Actions builder = new Actions(driver);
+                builder.moveToElement(hoverElement).perform();
+                By locator = By.id("clickElementID");
+                driver.click(locator);
+             */
+            Actions akcija = new Actions(Chrome.Drajver());
+            akcija.MoveToElement(Chrome.Element("ln-menuUpis", Selector.Class)).Perform();
+            akcija.MoveToElement(Chrome.Element("a[href='/Nalog/UnosNaloga/1']", Selector.Css)).Click().Perform();
+
+            UpisiLicnePodatke(promena, podvrsta: false, upisiJmbg: true);
+            UpisiAdresu(promena);
         }
 
         public static void PromeniLicnePodatke(Mup promena)
