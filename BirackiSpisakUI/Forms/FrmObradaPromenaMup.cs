@@ -221,11 +221,6 @@ namespace BirackiSpisakUI.Forms
             PrikaziPromenu(_indeks);
         }
 
-        private void FrmObradaPromenaMup_FormClosed(object sender, FormClosedEventArgs e)
-        {
-            JbsWeb.ZatvoriChrome();
-        }
-
         private void btnJmbg_Click(object sender, EventArgs e)
         {
             JbsWeb.Jmbg(txtJmbg.Text);
@@ -300,22 +295,22 @@ namespace BirackiSpisakUI.Forms
 
         private void btnTrenutnoPrebivaliste_Click(object sender, EventArgs e)
         {
-            ZupWeb.TrenutnoPrebivaliste(_promena);
+            ZupWeb.TrenutnoPrebivaliste(_promena.Jmbg, _promena.ImeLk, _promena.PrezimeLk);
         }
 
         private void btnMkr_Click(object sender, EventArgs e)
         {
-            ZupWeb.Mkr(_promena);
+            ZupWeb.Mkr(_promena.Jmbg, _promena.ImeLk, _promena.PrezimeLk);
         }
 
         private void btnMku_Click(object sender, EventArgs e)
         {
-            ZupWeb.Mku(_promena);
+            ZupWeb.Mku(_promena.Jmbg, _promena.ImeLk, _promena.PrezimeLk);
         }
 
         private void btnMkv_Click(object sender, EventArgs e)
         {
-            ZupWeb.Mkv(_promena);
+            ZupWeb.Mkv(_promena.Jmbg, _promena.ImeLk, _promena.PrezimeLk);
         }
     }
 }

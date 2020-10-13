@@ -97,5 +97,10 @@ namespace BirackiSpisakDataManager.Models
                 return $"{mesto}{drzava}{strano}";
             }
         }
+
+        public string GradOpstina
+        {
+            get { return Converter.LatToCyr(string.IsNullOrEmpty(MestoLk) ? OpstinaLk : MestoLk); }
+        }
     }
 }

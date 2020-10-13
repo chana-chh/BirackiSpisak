@@ -13,15 +13,9 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Compile Update="Forms\FrmPregledPromenaMku.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Update="Forms\FrmPregledPromenaMkv.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Update="Forms\FrmPregledPromenaMupStari.cs">
-      <SubType>Form</SubType>
-    </Compile>
+    <Compile Update="Forms\FrmPregledPromenaMku.cs" />
+    <Compile Update="Forms\FrmPregledPromenaMkv.cs" />
+    <Compile Update="Forms\FrmPregledPromenaMupStari.cs" />
     <Compile Update="Properties\Resources.Designer.cs">
       <DesignTime>True</DesignTime>
       <AutoGen>True</AutoGen>

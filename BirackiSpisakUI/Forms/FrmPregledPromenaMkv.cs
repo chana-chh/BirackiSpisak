@@ -99,7 +99,7 @@ namespace BirackiSpisakUI.Forms
                 s += $"Пребивалиште: {_promena.NevestaPrebivaliste}" + Environment.NewLine;
                 s += $"--------------------------------------------------------------------------------" + Environment.NewLine;
                 s += $"Књига, матично подручје (текући број/година уписа); град, општина" + Environment.NewLine;
-                s += $"{_promena.Knjiga}, {_promena.MaticnoPodrucje} ({_promena.TekuciBroj}/{_promena.GodinaUpisa}); {_promena.GradOpstina}";
+                s += $"{_promena.CeoMkvZapis}";
 
                 PrintDocument p = new PrintDocument();
                 p.PrintPage += delegate (object sender1, PrintPageEventArgs e1)

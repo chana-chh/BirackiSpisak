@@ -57,13 +57,13 @@
             // lblNaslov
             // 
             this.lblNaslov.AutoSize = true;
-            this.lblNaslov.Font = new System.Drawing.Font("Segoe UI", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.lblNaslov.Font = new System.Drawing.Font("Segoe UI", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.lblNaslov.ForeColor = System.Drawing.Color.SteelBlue;
             this.lblNaslov.Location = new System.Drawing.Point(12, 9);
             this.lblNaslov.Name = "lblNaslov";
-            this.lblNaslov.Size = new System.Drawing.Size(131, 65);
+            this.lblNaslov.Size = new System.Drawing.Size(509, 50);
             this.lblNaslov.TabIndex = 1;
-            this.lblNaslov.Text = "БСКг";
+            this.lblNaslov.Text = "Бирачки списак - Крагујевац";
             // 
             // btnUvozPromena
             // 
@@ -149,6 +149,7 @@
             this.btnMkvPromene.Text = "МКВ промене";
             this.btnMkvPromene.UseVisualStyleBackColor = false;
             this.btnMkvPromene.Visible = false;
+            this.btnMkvPromene.Click += new System.EventHandler(this.btnMkvPromene_Click);
             // 
             // btnPrijava
             // 
@@ -181,7 +182,7 @@
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(150, 405);
+            this.ClientSize = new System.Drawing.Size(645, 405);
             this.ControlBox = false;
             this.Controls.Add(this.btnChrome);
             this.Controls.Add(this.btnPrijava);

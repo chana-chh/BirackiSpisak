@@ -872,7 +872,6 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
             this.Text = "Обрада промена МУП";
             this.TopMost = true;
-            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.FrmObradaPromenaMup_FormClosed);
             this.pnlDugmici.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();

@@ -161,7 +161,7 @@
             this.Controls.Add(this.lblJmbg);
             this.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.ForeColor = System.Drawing.Color.Black;
-            this.Location = new System.Drawing.Point(305, 101);
+            this.Location = new System.Drawing.Point(650, 0);
             this.Name = "FrmPregledPromenaMku";
             this.ShowIcon = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;

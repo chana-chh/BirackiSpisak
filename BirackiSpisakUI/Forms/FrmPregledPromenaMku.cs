@@ -92,7 +92,7 @@ namespace BirackiSpisakUI.Forms
                 s += $"Име оца: {_promena.PunoImeOtac}" + Environment.NewLine;
                 s += $"Име мајке: {_promena.PunoImeMajka}" + Environment.NewLine;
                 s += $"Књига, матично подручје (текући број/година уписа); град, општина" + Environment.NewLine;
-                s += $"{_promena.Knjiga}, {_promena.MaticnoPodrucje} ({_promena.TekuciBroj}/{_promena.GodinaUpisa}); {_promena.GradOpstina}";
+                s += $"{_promena.CeoMkuZapis}";
                 
 
                 PrintDocument p = new PrintDocument();

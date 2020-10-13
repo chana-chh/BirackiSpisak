@@ -148,14 +148,37 @@ namespace BirackiSpisakDataManager.Web
             }
         }
 
-        private static void PopuniJmbg(Mup promena)
+        public static void PopuniResenjeMku(Mku promena)
+        {
+            Chrome.JbsTab();
+            string datumSmrti = promena.DatumSmrti.Value.ToShortDateString();
+            string ds = datumSmrti.Substring(0, 2);
+            string ms = datumSmrti.Substring(3, 2);
+            string gs = datumSmrti.Substring(6, 4);
+            Chrome.PopuniElement(promena.GradOpstina, "Resenje_ObrazlozenjeGradOpstina");
+            Chrome.PopuniElement(promena.MaticnoPodrucje, "Resenje_ObrazlozenjeMaticnoPodrucje");
+            Chrome.PopuniElement(promena.TekuciBroj, "Resenje_ObrazlozenjeTekuciBroj");
+            Chrome.PopuniElement(promena.GodinaUpisa, "Resenje_ObrazlozenjeGodina");
+            Chrome.PopuniElement(ds, "Resenje_ObrazlozenjeDatumSmrti_Day");
+            Chrome.PopuniElement(ms, "Resenje_ObrazlozenjeDatumSmrti_Month");
+            Chrome.PopuniElement(gs, "Resenje_ObrazlozenjeDatumSmrti_Year");
+        }
+
+        public static void IzbrisiUmrloLice(Mku promena)
+        {
+            Chrome.JbsTab();
+            Chrome.Idi("https://www.birackispisak.gov.rs/Nalog/UnosNalogaPretragaBiraca/15");
+            PopuniJmbg(promena.Jmbg);
+        }
+
+        private static void PopuniJmbg(string jmbg)
         {
             Chrome.JbsTab();
             var el = Chrome.Element("validation-summary-errors", Selector.Class);
             if (el == null)
             {
                 Chrome.Cekaj("Nalog_JMBG");
-                Chrome.PopuniElement(promena.Jmbg, "JmbgIliRedniBroj");
+                Chrome.PopuniElement(jmbg, "JmbgIliRedniBroj");
                 Chrome.Element("button_search", Selector.Class).Click();
             }
         }
@@ -164,7 +187,7 @@ namespace BirackiSpisakDataManager.Web
         {
             Chrome.JbsTab();
             Chrome.Idi("https://www.birackispisak.gov.rs/Nalog/UnosNalogaPretragaBiraca/2");
-            PopuniJmbg(promena);
+            PopuniJmbg(promena.Jmbg);
             var prezime = Chrome.Element("Nalog_Prezime");
             if (prezime.GetAttribute("value").Trim().Equals(""))
             {
@@ -177,7 +200,7 @@ namespace BirackiSpisakDataManager.Web
         {
             Chrome.JbsTab();
             Chrome.Idi("https://www.birackispisak.gov.rs/Nalog/UnosNalogaPretragaBiraca/7");
-            PopuniJmbg(promena);
+            PopuniJmbg(promena.Jmbg);
             UpisiAdresu(promena, true);
         }
 
@@ -185,12 +208,6 @@ namespace BirackiSpisakDataManager.Web
         {
             Chrome.JbsTab();
             Chrome.Idi("https://www.birackispisak.gov.rs/Nalog/ListaNaloga/-1");
-            /*
-                Actions builder = new Actions(driver);
-                builder.moveToElement(hoverElement).perform();
-                By locator = By.id("clickElementID");
-                driver.click(locator);
-             */
             Actions akcija = new Actions(Chrome.Drajver());
             akcija.MoveToElement(Chrome.Element("ln-menuUpis", Selector.Class)).Perform();
             akcija.MoveToElement(Chrome.Element("a[href='/Nalog/UnosNaloga/1']", Selector.Css)).Click().Perform();
@@ -203,7 +220,7 @@ namespace BirackiSpisakDataManager.Web
         {
             Chrome.JbsTab();
             Chrome.Idi("https://www.birackispisak.gov.rs/Nalog/UnosNalogaPretragaBiraca/6");
-            PopuniJmbg(promena);
+            PopuniJmbg(promena.Jmbg);
             UpisiLicnePodatke(promena, true);
         }
 
@@ -211,14 +228,64 @@ namespace BirackiSpisakDataManager.Web
         {
             Chrome.JbsTab();
             Chrome.Idi("https://www.birackispisak.gov.rs/Nalog/UnosNalogaPretragaBiraca/13");
-            PopuniJmbg(promena);
+            PopuniJmbg(promena.Jmbg);
         }
 
         public static void OdjaviPrebivalisteSluzbeno(Mup promena)
         {
             Chrome.JbsTab();
             Chrome.Idi("https://www.birackispisak.gov.rs/Nalog/UnosNalogaPretragaBiraca/32");
-            PopuniJmbg(promena);
+            PopuniJmbg(promena.Jmbg);
+        }
+
+        public static void PromeniLPzaZenika(Mkv promena)
+        {
+            Chrome.JbsTab();
+            Chrome.Idi("https://www.birackispisak.gov.rs/Nalog/UnosNalogaPretragaBiraca/6");
+            PopuniJmbg(promena.ZenikJmbg);
+            UpisiLicnePodatkeZenik(promena);
+        }
+
+        private static void UpisiLicnePodatkeZenik(Mkv promena)
+        {
+            Chrome.JbsTab();
+            Chrome.Cekaj("Nalog_JMBG");
+            var jmbg = Chrome.Element("Nalog_JMBG");
+            if (jmbg != null)
+            {
+                Chrome.ElementSelect("Nalog_PodVrstaPromeneID").SelectByValue("1");
+                Chrome.PopuniElement(Converter.LatToCyr(promena.ZenikPrezimeOdabrano), "Nalog_Prezime");
+            }
+        }
+
+        public static void PromeniLPzaNevestu(Mkv promena)
+        {
+            Chrome.JbsTab();
+            Chrome.Idi("https://www.birackispisak.gov.rs/Nalog/UnosNalogaPretragaBiraca/6");
+            PopuniJmbg(promena.NevestaJmbg);
+            UpisiLicnePodatkeNevesta(promena);
+        }
+
+        private static void UpisiLicnePodatkeNevesta(Mkv promena)
+        {
+            Chrome.JbsTab();
+            Chrome.Cekaj("Nalog_JMBG");
+            var jmbg = Chrome.Element("Nalog_JMBG");
+            if (jmbg != null)
+            {
+                Chrome.ElementSelect("Nalog_PodVrstaPromeneID").SelectByValue("1");
+                Chrome.PopuniElement(Converter.LatToCyr(promena.NevestaPrezimeOdabrano), "Nalog_Prezime");
+            }
+        }
+
+        public static void PopuniResenjeMkv(Mkv promena)
+        {
+            Chrome.JbsTab();
+            Chrome.PopuniElement(promena.GradOpstina, "Resenje_ObrazlozenjeGradOpstina");
+            Chrome.PopuniElement(promena.MaticnoPodrucje, "Resenje_ObrazlozenjeMaticnoPodrucje");
+            Chrome.PopuniElement(promena.TekuciBroj, "Resenje_ObrazlozenjeTekuciBroj");
+            Chrome.PopuniElement(promena.GodinaUpisa, "Resenje_ObrazlozenjeGodina");
+            Chrome.PopuniElement("ВЕНЧАНИХ", "Resenje_ObrazlozenjeMaticnaKnjiga");
         }
     }
 }

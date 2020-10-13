@@ -1,6 +1,7 @@
 ﻿using BirackiSpisakDataManager.Helpers;
 using BirackiSpisakDataManager.Models;
 using BirackiSpisakDataManager.ModelsData;
+using BirackiSpisakDataManager.Web;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -60,6 +61,7 @@ namespace BirackiSpisakUI.Forms
                 txtMestoSmrti.Text = "";
                 txtMaticnaKnjiga.Text = "";
                 txtDatumFajla.Text = "";
+                lblBrojPromena.Text = $"0 од 0";
                 _promena = null;
             }
         }
@@ -107,17 +109,17 @@ namespace BirackiSpisakUI.Forms
             {
                 _promena = _lista[_indeks];
                 string s = $"МКУ подаци";
-                s += $"    датум фајла:{_promena.DatumFajla.Value.ToShortDateString()}" + Environment.NewLine;
+                s += $"        датум фајла:{_promena.DatumFajla.Value.ToShortDateString()}" + Environment.NewLine;
                 s += $"================================================================================" + Environment.NewLine;
                 s += $"ЈМБГ: {_promena.Jmbg}" + Environment.NewLine;
-                s += $"Презиме пре брака: {_promena.PrezimePreBraka}" + Environment.NewLine;
-                s += $"Пол: {_promena.Pol}" + Environment.NewLine;
-                s += $"Име: {_promena.PunoIme}" + Environment.NewLine;
+                s += $"Презиме пре брака: {_promena.PrezimePreBraka}    Пол: {_promena.Pol}" + Environment.NewLine;
                 s += $"Рођен/а: {_promena.DatumRodjenja} у {_promena.PunoMestoRodjenja}" + Environment.NewLine;
+                s += $"СМРТ    датум: {_promena.DatumSmrti} у {_promena.PunoMestoSmrti}" + Environment.NewLine;
                 s += $"Пребивалиште: {_promena.PunoPrebivaliste}" + Environment.NewLine;
-                s += $"Датум смрти: {_promena.DatumSmrti}" + Environment.NewLine;
-                s += $"Место смрти: {_promena.PunoMestoSmrti}" + Environment.NewLine;
-                s += $"МКУ: {_promena.CeoMkuZapis}";
+                s += $"Име оца: {_promena.PunoImeOtac}" + Environment.NewLine;
+                s += $"Име мајке: {_promena.PunoImeMajka}" + Environment.NewLine;
+                s += $"Књига, матично подручје (текући број/година уписа); град, општина" + Environment.NewLine;
+                s += $"{_promena.CeoMkuZapis}";
 
                 PrintDocument p = new PrintDocument();
                 p.PrintPage += delegate (object sender1, PrintPageEventArgs e1)
@@ -137,7 +139,7 @@ namespace BirackiSpisakUI.Forms
                 }
             }
         }
-        
+
         private void btnReseno_Click(object sender, EventArgs e)
         {
             if (_promena != null)
@@ -157,42 +159,43 @@ namespace BirackiSpisakUI.Forms
 
         private void btnJmbg_Click(object sender, EventArgs e)
         {
-
+            JbsWeb.Jmbg(txtJmbg.Text);
         }
 
         private void btnZahtevi_Click(object sender, EventArgs e)
         {
-
+            JbsWeb.Zahtevi(txtJmbg.Text);
         }
 
         private void btnUmrli_Click(object sender, EventArgs e)
         {
-
+            JbsWeb.IzbrisiUmrloLice(_promena);
         }
 
         private void btnResenje_Click(object sender, EventArgs e)
         {
-
+            JbsWeb.PopuniOvlascenje();
+            JbsWeb.PopuniResenjeMku(_promena);
         }
 
         private void btnTrenutnoPrebivaliste_Click(object sender, EventArgs e)
         {
-
+            ZupWeb.TrenutnoPrebivaliste(_promena.Jmbg, _promena.Ime, _promena.Prezime);
         }
 
         private void btnMkr_Click(object sender, EventArgs e)
         {
-
+            ZupWeb.Mkr(_promena.Jmbg, _promena.Ime, _promena.Prezime);
         }
 
         private void btnMku_Click(object sender, EventArgs e)
         {
-
+            ZupWeb.Mku(_promena.Jmbg, _promena.Ime, _promena.Prezime);
         }
 
         private void btnMkv_Click(object sender, EventArgs e)
         {
-
+            ZupWeb.Mkv(_promena.Jmbg, _promena.Ime, _promena.Prezime);
         }
     }
 }

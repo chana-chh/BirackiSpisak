@@ -65,7 +65,7 @@ namespace BirackiSpisakUI
             FrmObradaPromenaMup forma = new FrmObradaPromenaMup(korisnik);
             forma.ShowDialog();
         }
-
+        
         private void FrmKontrolnaTabla_Activated(object sender, EventArgs e)
         {
             btnMupPromene.BackColor = Color.MintCream;
@@ -77,6 +77,13 @@ namespace BirackiSpisakUI
         {
             btnMkuPromene.BackColor = Color.OrangeRed;
             FrmObradaPromenaMku forma = new FrmObradaPromenaMku(korisnik);
+            forma.ShowDialog();
+        }
+
+        private void btnMkvPromene_Click(object sender, EventArgs e)
+        {
+            btnMkvPromene.BackColor = Color.OrangeRed;
+            FrmObradaPromenaMkv forma = new FrmObradaPromenaMkv(korisnik);
             forma.ShowDialog();
         }
 

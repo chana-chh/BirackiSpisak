@@ -73,8 +73,8 @@ namespace BirackiSpisakDataManager.Helpers
 
         public static void PodesiProzor()
         {
-            _driver.Manage().Window.Size = new Size(1350, 1040);
-            _driver.Manage().Window.Position = new Point(570, 0);
+            _driver.Manage().Window.Size = new Size(1270, 1040);
+            _driver.Manage().Window.Position = new Point(650, 0);
         }
 
         public static void EzupTab()
