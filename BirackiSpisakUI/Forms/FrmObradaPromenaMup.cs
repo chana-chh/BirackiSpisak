@@ -172,6 +172,8 @@ namespace BirackiSpisakUI.Forms
                 s += $"================================================================================" + Environment.NewLine;
                 s += $"ЈМБГ: {_promena.Jmbg}" + Environment.NewLine;
                 s += $"Датум одређивања ЈМБГ: {_promena.DatumOdredjivanjaJmbg}" + Environment.NewLine;
+                s += $"Стари ЈМБГ: {_promena.JmbgStari}" + Environment.NewLine;
+                s += $"Отпуст из држављанства: {_promena.DatumOtpustaIzDrzavljanstva}" + Environment.NewLine;
                 s += $"Пол: {_promena.Pol}" + Environment.NewLine;
                 s += $"Статус: {_promena.Status}" + Environment.NewLine;
                 s += $"Име: {_promena.PunoIme}" + Environment.NewLine;
