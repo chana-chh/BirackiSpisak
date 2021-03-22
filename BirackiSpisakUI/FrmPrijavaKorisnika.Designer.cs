@@ -80,7 +80,7 @@
             this.btnPrijava.Location = new System.Drawing.Point(377, 126);
             this.btnPrijava.Name = "btnPrijava";
             this.btnPrijava.Size = new System.Drawing.Size(126, 30);
-            this.btnPrijava.TabIndex = 1;
+            this.btnPrijava.TabIndex = 2;
             this.btnPrijava.Text = "Пријави се";
             this.btnPrijava.UseVisualStyleBackColor = true;
             this.btnPrijava.Click += new System.EventHandler(this.btnPrijava_Click);
@@ -94,7 +94,8 @@
             this.btnKrajRada.Location = new System.Drawing.Point(377, 171);
             this.btnKrajRada.Name = "btnKrajRada";
             this.btnKrajRada.Size = new System.Drawing.Size(126, 30);
-            this.btnKrajRada.TabIndex = 1;
+            this.btnKrajRada.TabIndex = 3;
+            this.btnKrajRada.TabStop = false;
             this.btnKrajRada.Text = "Крај рада";
             this.btnKrajRada.UseVisualStyleBackColor = true;
             this.btnKrajRada.Click += new System.EventHandler(this.btnKrajRada_Click);
@@ -105,15 +106,18 @@
             this.txtKorisnickoIme.Location = new System.Drawing.Point(328, 64);
             this.txtKorisnickoIme.Name = "txtKorisnickoIme";
             this.txtKorisnickoIme.Size = new System.Drawing.Size(175, 25);
-            this.txtKorisnickoIme.TabIndex = 2;
+            this.txtKorisnickoIme.TabIndex = 0;
             // 
             // txtLozinka
             // 
+            this.txtLozinka.BackColor = System.Drawing.Color.White;
             this.txtLozinka.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.txtLozinka.ForeColor = System.Drawing.Color.Black;
             this.txtLozinka.Location = new System.Drawing.Point(328, 95);
             this.txtLozinka.Name = "txtLozinka";
+            this.txtLozinka.PasswordChar = '*';
             this.txtLozinka.Size = new System.Drawing.Size(175, 25);
-            this.txtLozinka.TabIndex = 2;
+            this.txtLozinka.TabIndex = 1;
             // 
             // pictureBox1
             // 

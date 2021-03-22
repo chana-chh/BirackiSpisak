@@ -195,14 +195,18 @@ namespace BirackiSpisakUI.Forms
         {
             if (_promena != null)
             {
-                _promena.Reseno = true;
-                _promena.Datum = DateTime.Now;
-                _promena.Referent = _korisnik.PunoIme;
-                _mkvData.ResiPromenu(_promena);
-                _lista = _mkvData.SveNeresenePromene();
-                if (_indeks >= _lista.Count)
+                DialogResult dr = MessageBox.Show($"Да ли желите да решите промену за{Environment.NewLine}{_promena.ZenikPunoIme}{Environment.NewLine}{_promena.NevestaPunoIme}", "Промене МКВ", MessageBoxButtons.YesNo, MessageBoxIcon.Information);
+                if (dr == DialogResult.Yes)
                 {
-                    _indeks = _lista.Count - 1;
+                    _promena.Reseno = true;
+                    _promena.Datum = DateTime.Now;
+                    _promena.Referent = _korisnik.PunoIme;
+                    _mkvData.ResiPromenu(_promena);
+                    _lista = _mkvData.SveNeresenePromene();
+                    if (_indeks >= _lista.Count)
+                    {
+                        _indeks = _lista.Count - 1;
+                    }
                 }
             }
             PrikaziPromenu(_indeks);

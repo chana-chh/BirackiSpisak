@@ -182,7 +182,7 @@
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(645, 405);
+            this.ClientSize = new System.Drawing.Size(524, 406);
             this.ControlBox = false;
             this.Controls.Add(this.btnChrome);
             this.Controls.Add(this.btnPrijava);
@@ -196,11 +196,10 @@
             this.Controls.Add(this.btnIzlaz);
             this.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.ForeColor = System.Drawing.Color.Black;
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Name = "FrmKontrolnaTabla";
             this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
-            this.Text = "FrmKontrolnaTabla";
-            this.TopMost = true;
+            this.Text = "Бирачки списак - Крагујевац";
             this.Activated += new System.EventHandler(this.FrmKontrolnaTabla_Activated);
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.FrmKontrolnaTabla_FormClosed);
             this.ResumeLayout(false);

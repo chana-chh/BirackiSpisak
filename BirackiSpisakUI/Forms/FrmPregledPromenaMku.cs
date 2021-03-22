@@ -85,6 +85,7 @@ namespace BirackiSpisakUI.Forms
                 s += $"        датум фајла:{_promena.DatumFajla.Value.ToShortDateString()}" + Environment.NewLine;
                 s += $"================================================================================" + Environment.NewLine;
                 s += $"ЈМБГ: {_promena.Jmbg}" + Environment.NewLine;
+                s += $"Име: {_promena.PunoIme}" + Environment.NewLine;
                 s += $"Презиме пре брака: {_promena.PrezimePreBraka}    Пол: {_promena.Pol}" + Environment.NewLine;
                 s += $"Рођен/а: {_promena.DatumRodjenja} у {_promena.PunoMestoRodjenja}" + Environment.NewLine;
                 s += $"СМРТ    датум: {_promena.DatumSmrti} у {_promena.PunoMestoSmrti}" + Environment.NewLine;

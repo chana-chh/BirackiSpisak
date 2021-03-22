@@ -166,7 +166,6 @@
             this.ShowIcon = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
             this.Text = "Преглед промена МУП";
-            this.TopMost = true;
             ((System.ComponentModel.ISupportInitialize)(this.dgvTabela)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

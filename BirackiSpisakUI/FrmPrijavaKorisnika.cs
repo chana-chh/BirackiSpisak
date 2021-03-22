@@ -30,12 +30,12 @@ namespace BirackiSpisakUI
         private void btnPrijava_Click(object sender, EventArgs e)
         {
             // Klasicna prijava
-            // string korisnickoIme = txtKorisnickoIme.Text.Trim();
-            // string lozinka = .Text.Trim();
+            string korisnickoIme = txtKorisnickoIme.Text.Trim();
+            string lozinka = txtLozinka.Text.Trim();
 
             // Automatska prijava
-            string korisnickoIme = "чана";
-            string lozinka = "чанам7ј";
+            // string korisnickoIme = "чана";
+            // string lozinka = "чанам7ј";
 
             if (!String.IsNullOrEmpty(korisnickoIme) && !String.IsNullOrEmpty(lozinka))
             {

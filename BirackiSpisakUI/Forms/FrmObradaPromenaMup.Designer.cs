@@ -545,9 +545,9 @@
             this.btnDokaz.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.btnDokaz.FlatAppearance.MouseOverBackColor = System.Drawing.Color.LightBlue;
             this.btnDokaz.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnDokaz.Location = new System.Drawing.Point(385, 553);
+            this.btnDokaz.Location = new System.Drawing.Point(385, 550);
             this.btnDokaz.Name = "btnDokaz";
-            this.btnDokaz.Size = new System.Drawing.Size(30, 30);
+            this.btnDokaz.Size = new System.Drawing.Size(35, 35);
             this.btnDokaz.TabIndex = 5;
             this.btnDokaz.UseVisualStyleBackColor = true;
             this.btnDokaz.Click += new System.EventHandler(this.btnDokaz_Click);
@@ -559,9 +559,9 @@
             this.btnReseno.FlatAppearance.BorderColor = System.Drawing.Color.Black;
             this.btnReseno.FlatAppearance.MouseOverBackColor = System.Drawing.Color.LightGreen;
             this.btnReseno.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnReseno.Location = new System.Drawing.Point(457, 553);
+            this.btnReseno.Location = new System.Drawing.Point(457, 550);
             this.btnReseno.Name = "btnReseno";
-            this.btnReseno.Size = new System.Drawing.Size(30, 30);
+            this.btnReseno.Size = new System.Drawing.Size(35, 35);
             this.btnReseno.TabIndex = 5;
             this.btnReseno.UseVisualStyleBackColor = true;
             this.btnReseno.Click += new System.EventHandler(this.btnReseno_Click);
@@ -863,7 +863,7 @@
             this.Controls.Add(this.btnIzlaz);
             this.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.ForeColor = System.Drawing.Color.Black;
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Location = new System.Drawing.Point(0, 410);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
@@ -871,7 +871,6 @@
             this.ShowIcon = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
             this.Text = "Обрада промена МУП";
-            this.TopMost = true;
             this.pnlDugmici.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();

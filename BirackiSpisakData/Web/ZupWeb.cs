@@ -93,6 +93,7 @@ namespace BirackiSpisakDataManager.Web
                 Chrome.PopuniElement(maticnoPodrucje, "Resenje_ObrazlozenjeMaticnoPodrucje");
                 Chrome.PopuniElement(tekuciBroj, "Resenje_ObrazlozenjeTekuciBroj");
                 Chrome.PopuniElement(godinaUpisa, "Resenje_ObrazlozenjeGodina");
+                return true;
             }
             return false;
         }

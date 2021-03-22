@@ -459,7 +459,7 @@
             this.btnReseno.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnReseno.Location = new System.Drawing.Point(457, 548);
             this.btnReseno.Name = "btnReseno";
-            this.btnReseno.Size = new System.Drawing.Size(30, 30);
+            this.btnReseno.Size = new System.Drawing.Size(35, 35);
             this.btnReseno.TabIndex = 5;
             this.btnReseno.UseVisualStyleBackColor = true;
             this.btnReseno.Click += new System.EventHandler(this.btnReseno_Click);
@@ -472,7 +472,7 @@
             this.btnDokaz.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnDokaz.Location = new System.Drawing.Point(385, 548);
             this.btnDokaz.Name = "btnDokaz";
-            this.btnDokaz.Size = new System.Drawing.Size(30, 30);
+            this.btnDokaz.Size = new System.Drawing.Size(35, 35);
             this.btnDokaz.TabIndex = 5;
             this.btnDokaz.UseVisualStyleBackColor = true;
             this.btnDokaz.Click += new System.EventHandler(this.btnDokaz_Click);
@@ -512,14 +512,13 @@
             this.Controls.Add(this.button2);
             this.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.ForeColor = System.Drawing.Color.Black;
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Location = new System.Drawing.Point(0, 410);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "FrmObradaPromenaMku";
             this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
-            this.Text = "FrmObradaPromenaMku";
-            this.TopMost = true;
+            this.Text = "Обрада промена МКУ";
             this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();

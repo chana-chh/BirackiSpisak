@@ -114,15 +114,14 @@
             this.Controls.Add(this.btnPregledMup);
             this.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.ForeColor = System.Drawing.Color.Black;
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Location = new System.Drawing.Point(155, 101);
             this.MaximizeBox = false;
-            this.MinimizeBox = false;
             this.Name = "FrmPregledPromena";
             this.ShowIcon = false;
             this.ShowInTaskbar = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
-            this.Text = "FrmPregledPromena";
+            this.Text = "Преглед промена";
             this.TopMost = true;
             this.ResumeLayout(false);
 

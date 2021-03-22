@@ -112,6 +112,7 @@ namespace BirackiSpisakUI.Forms
                 s += $"        датум фајла:{_promena.DatumFajla.Value.ToShortDateString()}" + Environment.NewLine;
                 s += $"================================================================================" + Environment.NewLine;
                 s += $"ЈМБГ: {_promena.Jmbg}" + Environment.NewLine;
+                s += $"Име: {_promena.PunoIme}" + Environment.NewLine;
                 s += $"Презиме пре брака: {_promena.PrezimePreBraka}    Пол: {_promena.Pol}" + Environment.NewLine;
                 s += $"Рођен/а: {_promena.DatumRodjenja} у {_promena.PunoMestoRodjenja}" + Environment.NewLine;
                 s += $"СМРТ    датум: {_promena.DatumSmrti} у {_promena.PunoMestoSmrti}" + Environment.NewLine;
@@ -144,14 +145,18 @@ namespace BirackiSpisakUI.Forms
         {
             if (_promena != null)
             {
-                _promena.Reseno = true;
-                _promena.Datum = DateTime.Now;
-                _promena.Referent = _korisnik.PunoIme;
-                _mkuData.ResiPromenu(_promena);
-                _lista = _mkuData.SveNeresenePromene();
-                if (_indeks >= _lista.Count)
+                DialogResult dr = MessageBox.Show($"Да ли желите да решите промену за{Environment.NewLine}{_promena.PunoIme}", "Промене МКУ", MessageBoxButtons.YesNo, MessageBoxIcon.Information);
+                if (dr == DialogResult.Yes)
                 {
-                    _indeks = _lista.Count - 1;
+                    _promena.Reseno = true;
+                    _promena.Datum = DateTime.Now;
+                    _promena.Referent = _korisnik.PunoIme;
+                    _mkuData.ResiPromenu(_promena);
+                    _lista = _mkuData.SveNeresenePromene();
+                    if (_indeks >= _lista.Count)
+                    {
+                        _indeks = _lista.Count - 1;
+                    }
                 }
             }
             PrikaziPromenu(_indeks);

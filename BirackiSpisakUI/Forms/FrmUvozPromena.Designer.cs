@@ -123,13 +123,13 @@
             this.Controls.Add(this.btnMupUvoz);
             this.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.ForeColor = System.Drawing.Color.Black;
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Location = new System.Drawing.Point(155, 65);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "FrmUvozPromena";
             this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
-            this.Text = "FrmUvozPromena";
+            this.Text = "Увоз промена";
             this.TopMost = true;
             this.ResumeLayout(false);
 

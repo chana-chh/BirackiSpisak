@@ -1,6 +1,7 @@
 ﻿using BirackiSpisakDataManager.Helpers;
 using BirackiSpisakDataManager.Models;
 using OpenQA.Selenium.Interactions;
+using OpenQA.Selenium.Support.UI;
 using System;
 using System.Configuration;
 using static BirackiSpisakData.Enums;
@@ -212,7 +213,7 @@ namespace BirackiSpisakDataManager.Web
             akcija.MoveToElement(Chrome.Element("ln-menuUpis", Selector.Class)).Perform();
             akcija.MoveToElement(Chrome.Element("a[href='/Nalog/UnosNaloga/1']", Selector.Css)).Click().Perform();
 
-            UpisiLicnePodatke(promena, podvrsta: false, upisiJmbg: true);
+            UpisiLicnePodatke(promena, false, true);
             UpisiAdresu(promena);
         }
 
