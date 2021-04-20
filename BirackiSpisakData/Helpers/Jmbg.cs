@@ -6,7 +6,7 @@ namespace BirackiSpisakDataManager.Helpers
 {
     public static class Jmbg
     {
-        public static bool IsOK(string jmbg)
+        public static bool jeIspravan(string jmbg)
         {
             if (jmbg.Length != 13)
             {

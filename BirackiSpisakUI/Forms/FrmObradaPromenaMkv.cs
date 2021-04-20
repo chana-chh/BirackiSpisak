@@ -72,7 +72,7 @@ namespace BirackiSpisakUI.Forms
 
         private void ProveriGreske(Mkv promena)
         {
-            if (!Jmbg.IsOK(promena.ZenikJmbg))
+            if (!Jmbg.jeIspravan(promena.ZenikJmbg))
             {
                 MessageBox.Show("ЈМБГ женика: Није исправан!", "МКВ промене", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
@@ -85,7 +85,7 @@ namespace BirackiSpisakUI.Forms
                 }
             }
 
-            if (!Jmbg.IsOK(promena.NevestaJmbg))
+            if (!Jmbg.jeIspravan(promena.NevestaJmbg))
             {
                 MessageBox.Show("ЈМБГ невесте: Није исправан!", "МКВ промене", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }

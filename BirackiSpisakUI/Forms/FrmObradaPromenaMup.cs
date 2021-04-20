@@ -22,6 +22,7 @@ namespace BirackiSpisakUI.Forms
         private Mup _promena = new Mup();
         private int _indeks = 0;
         private bool _sl = false;
+        private bool _punolenti = false;
 
         public FrmObradaPromenaMup(Korisnik korisnik)
         {
@@ -89,17 +90,16 @@ namespace BirackiSpisakUI.Forms
         private void ProveriGreske(Mup promena)
         {
             string greske = "";
-            if (!Jmbg.IsOK(promena.Jmbg))
+            if (!Jmbg.jeIspravan(promena.Jmbg))
             {
                 greske += "ЈМБГ: Није исправан!" + Environment.NewLine;
             }
-            else
+
+            int razlika = DateTime.Compare((DateTime)Dates.DobFromJmbg(promena.Jmbg), (DateTime)promena.DatumRodjenja);
+
+            if (razlika != 0)
             {
-                int razlika = DateTime.Compare((DateTime)Dates.DobFromJmbg(promena.Jmbg), (DateTime)promena.DatumRodjenja);
-                if (razlika != 0)
-                {
-                    greske += "ЈМБГ: Датум рођења се не слаже са ЈМБГ!" + Environment.NewLine;
-                }
+                greske += "ЈМБГ: Датум рођења се не слаже са ЈМБГ!" + Environment.NewLine;
             }
 
             if (!string.IsNullOrEmpty(promena.JmbgStari))
@@ -110,6 +110,11 @@ namespace BirackiSpisakUI.Forms
             if (promena.Status.Equals("U"))
             {
                 greske += "СТАТУС: Умрло лице!" + Environment.NewLine;
+                BackColor = Color.DimGray;
+            }
+            else
+            {
+                BackColor = Color.White;
             }
 
             if (promena.DatumOtpustaIzDrzavljanstva != null)
@@ -125,6 +130,13 @@ namespace BirackiSpisakUI.Forms
             if (!string.IsNullOrEmpty(promena.DatumOdjaveAdrese.ToString()))
             {
                 greske += "ПРЕБИВАЛИШТЕ: Одјава пребивалишта!" + Environment.NewLine;
+                BackColor = Color.Red;
+                btnOdjavaPrebivalistaSluzbeno.Enabled = true;
+            }
+            else
+            {
+                BackColor = Color.White;
+                btnOdjavaPrebivalistaSluzbeno.Enabled = false;
             }
 
             if (!string.IsNullOrEmpty(greske))
@@ -248,6 +260,16 @@ namespace BirackiSpisakUI.Forms
 
         private void btnResenje_Click(object sender, EventArgs e)
         {
+            if (_punolenti)
+            {
+                if (!ZupWeb.UpisiMkrZaPunoletne(_promena))
+                {
+                    MessageBox.Show("У еЗуп-у није отворена МКР за ово лице", "Подаци из МКР");
+                }
+            }
+
+            _punolenti = false;
+
             JbsWeb.PopuniOvlascenje();
             if (_sl)
             {
@@ -273,6 +295,7 @@ namespace BirackiSpisakUI.Forms
         private void btnPunoletni_Click(object sender, EventArgs e)
         {
             JbsWeb.UpisiPunoletnoLice(_promena);
+            _punolenti = true;
         }
 
         private void btnPumoletniMkr_Click(object sender, EventArgs e)

@@ -87,5 +87,23 @@ namespace BirackiSpisakDataManager.Helpers
 
             return date;
         }
+
+        public static bool jePunoletstvo(string text)
+        {
+            DateTime? datum = TextToDate(text);
+
+            if (datum != null)
+            {
+                DateTime dat = (DateTime)datum;
+                DateTime trenutniDatum = DateTime.Now;
+                int razlika = (dat.Date - trenutniDatum.Date).Days;
+                if (razlika > -2 && razlika < 2)
+                {
+                    return true;
+                }
+            }
+
+            return false;
+        }
     }
 }

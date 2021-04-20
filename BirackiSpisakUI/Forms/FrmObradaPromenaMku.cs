@@ -68,7 +68,7 @@ namespace BirackiSpisakUI.Forms
 
         private void ProveriGreske(Mku promena)
         {
-            if (!Jmbg.IsOK(promena.Jmbg))
+            if (!Jmbg.jeIspravan(promena.Jmbg))
             {
                 MessageBox.Show("ЈМБГ: Није исправан!", "МКУ промене", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
