@@ -127,16 +127,21 @@ namespace BirackiSpisakUI.Forms
                 greske += "ПРЕБИВАЛИШТЕ: Нема пријаву пребивалишта!" + Environment.NewLine;
             }
 
-            if (!string.IsNullOrEmpty(promena.DatumOdjaveAdrese.ToString()))
+            if (!string.IsNullOrEmpty(promena.DatumOdjaveAdrese.ToString()) && !promena.Status.Equals("U"))
             {
                 greske += "ПРЕБИВАЛИШТЕ: Одјава пребивалишта!" + Environment.NewLine;
                 BackColor = Color.Red;
-                btnOdjavaPrebivalistaSluzbeno.Enabled = true;
+                if (promena.DatumOtpustaIzDrzavljanstva == null)
+                {
+                    btnOdjavaPrebivalistaSluzbeno.Enabled = true;
+                    btnOdjavaPrebivalista.Enabled = true;
+                }
             }
             else
             {
                 BackColor = Color.White;
                 btnOdjavaPrebivalistaSluzbeno.Enabled = false;
+                btnOdjavaPrebivalista.Enabled = false;
             }
 
             if (!string.IsNullOrEmpty(greske))
