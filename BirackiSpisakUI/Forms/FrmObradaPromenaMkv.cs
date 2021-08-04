@@ -78,11 +78,11 @@ namespace BirackiSpisakUI.Forms
             }
             else
             {
-                int razlikaDatuma = DateTime.Compare((DateTime)Dates.DobFromJmbg(_promena.ZenikJmbg), (DateTime)_promena.ZenikDatumRodjenja);
-                if (razlikaDatuma != 0)
-                {
-                    MessageBox.Show("Датум рођења женика се не слаже са ЈМБГ!", "МКВ промене", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                }
+                //int razlikaDatuma = DateTime.Compare((DateTime)Dates.DobFromJmbg(_promena.ZenikJmbg), (DateTime)_promena.ZenikDatumRodjenja);
+                //if (razlikaDatuma != 0)
+                //{
+                //    MessageBox.Show("Датум рођења женика се не слаже са ЈМБГ!", "МКВ промене", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                //}
             }
 
             if (!Jmbg.jeIspravan(promena.NevestaJmbg))
@@ -91,11 +91,11 @@ namespace BirackiSpisakUI.Forms
             }
             else
             {
-                int razlikaDatuma = DateTime.Compare((DateTime)Dates.DobFromJmbg(_promena.NevestaJmbg), (DateTime)_promena.NevestaDatumRodjenja);
-                if (razlikaDatuma != 0)
-                {
-                    MessageBox.Show("Датум рођења невесте се не слаже са ЈМБГ!", "МКВ промене", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                }
+                //int razlikaDatuma = DateTime.Compare((DateTime)Dates.DobFromJmbg(_promena.NevestaJmbg), (DateTime)_promena.NevestaDatumRodjenja);
+                //if (razlikaDatuma != 0)
+                //{
+                //    MessageBox.Show("Датум рођења невесте се не слаже са ЈМБГ!", "МКВ промене", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                //}
             }
 
             string zenikPromenaPrezimena = "";

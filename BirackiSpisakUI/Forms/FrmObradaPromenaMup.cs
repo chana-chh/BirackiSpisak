@@ -131,6 +131,7 @@ namespace BirackiSpisakUI.Forms
             {
                 greske += "ПРЕБИВАЛИШТЕ: Одјава пребивалишта!" + Environment.NewLine;
                 BackColor = Color.Red;
+
                 if (promena.DatumOtpustaIzDrzavljanstva == null)
                 {
                     btnOdjavaPrebivalistaSluzbeno.Enabled = true;
